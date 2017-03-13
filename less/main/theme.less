@@ -101,18 +101,11 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 .template__content {
 	padding-top: @header-height;
-	
-	.page--home & {
-		padding-top: 0;
-	}
 }
 
 // Container
 
 .container {
-	.display-flex(flex);
-	.justify-content(space-between, distribute);
-	.align-items(center, center);
 
 	@media @mobile {
 		display: block;

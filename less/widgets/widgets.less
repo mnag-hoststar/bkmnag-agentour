@@ -1,5 +1,5 @@
 // ----------------------------------------
-// Duotone: LESS > Widgets > Widgets
+// Agentour: LESS > Widgets > Widgets
 // ----------------------------------------
 //
 // #Global Widget Styles
@@ -17,9 +17,7 @@
 
 .main-content .widget {
 
-    &:first-child {
-        margin-top: 0;
-    }
+    
 }
 
 .main-content .widget {
@@ -40,11 +38,33 @@
     }
 }
 
-// #Content Widget
-// -----------------------------
-
-
-.widget[data-name="content"] {
+.widget[data-name="content"], 
+.widget[data-name="pagetitle"],
+.widget[data-name="responsivecolumns"],
+.widget[data-name="signupform"],
+.widget[data-name="contactform"],
+.widget[data-name="advancedcontactform"],
+.widget[data-name="button"],
+.widget[data-name="tweet"],
+.widget[data-name="clicktocall"],
+.widget[data-name="dropbox"],
+.widget[data-name="facebooklike"],
+.widget[data-name="paypalbuynow"],
+.widget[data-name="socialicons"],
+.widget[data-name="disqus"],
+.widget[data-name="linkedinprofile"],
+.widget[data-name="linkedincompanyprofile"],
+.widget[data-name="profile"],
+.widget[data-name="companyaddress"],
+.widget[data-name="twitter"],
+.widget[data-name="facebookcomments"],
+.widget[data-name="donation"],
+.widget[data-name="yelpreview"],
+.widget[data-name="errormessages"],
+.widget[data-name="blogsearch"],
+.widget[data-name="blogpostlist"],
+.widget[data-name="ecombasket"],
+.widget[data-name="ecomcategorieslist"],
 	max-width: @layout-width-desktop;
 	margin: 0 auto;
 
@@ -55,9 +75,6 @@
 
 // Responsive Column Widgets
 .widget[data-name="responsivecolumns"] {
-
-	max-width: @layout-width-desktop;
-	margin: 0 auto;
 
     // Widget
     .widget {
