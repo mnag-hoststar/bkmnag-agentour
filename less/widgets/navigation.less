@@ -70,13 +70,9 @@
 
 .template__navigation {
 	display: inline-block;
-
 }
 
 .widget[data-widget-type="extendednavigation"] {
-	padding: 0;
-	position: static;
-	
 	&.open {
 		@media @tablet {
 			position: absolute;
@@ -254,7 +250,6 @@
 // Navigation Normal Item
 
 .navigation-item {
-	position: static;
 	margin-bottom: 0;
 	padding: 0;
 	
@@ -374,29 +369,28 @@
 // Navigation Folder Submenu Single Item
 
 .navigation-item--child {
-	display: inline-block;
 
 	@media @tablet {
 		display: block;
 	}
 
 	.item-name {
-		color: @color__navigation-item--text;
-		line-height: 1em;
+		color: @color__navigation--text;
+		line-height: 2em;
 
 		@media @tablet {
 			padding: 1em 0;
 		}
 		
 		&:hover {
-			color: @color__navigation-item--text--hover;
+			color: @color__navigation--text--hover;
 		}
 	}
 
 	// Selected Folder Item
 
 	&.selected .item-name {
-		color: @color__navigation-item--text--selected;
+		color: @color__navigation--text--selected;
 	}
 }
 

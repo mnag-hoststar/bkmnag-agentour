@@ -69,13 +69,13 @@
 .widget[data-name="ecombasketsummary"],
 .widget[data-name="menusections"],
 .widget[data-name="menu"] {
+    width: 80%;
 	max-width: @layout-width-desktop;
 	margin: 0 auto;
 	margin-bottom: 2em;
-
-	@media @tablet {
-		max-width: 100%;
-	}
+    @media @mobile {
+        width: 90%;
+    }
 }
 
 // Responsive Column Widgets
@@ -86,10 +86,6 @@
 
         @media @mobile {
             margin: 0 0 30px;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
         }
     }
 
@@ -131,10 +127,6 @@
     margin-top: 0!important; // Ensures correct spacing for default pages
     margin-left: 0;
     margin-right: 0;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
 }
 
 
