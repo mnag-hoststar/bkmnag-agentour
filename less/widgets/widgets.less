@@ -1,0 +1,131 @@
+// ----------------------------------------
+// Duotone: LESS > Widgets > Widgets
+// ----------------------------------------
+//
+// #Global Widget Styles
+// #Columns
+// #Page Title Widget
+// #Line Widget
+//
+// ----------------------------------------
+
+// -----------------------------
+// #Global Widget Styles
+// -----------------------------
+
+.bk-zone {
+	width: 100%;
+}
+
+.widget--zone-widget,
+.widget {
+	margin: 0;
+    padding: 1em 0;
+}
+
+.template__content {
+	> .widget,
+	.bk-zone > .widget {
+		> * {
+			.template__content--width();
+		}
+	}
+	
+	.widget[data-name="line"] > * {
+		width: auto;
+		max-width: inherit;
+		margin: 1em 0;
+	}
+}
+
+
+// -----------------------------
+// #Columns
+// -----------------------------
+
+.template__content {
+	.widget[data-name="content"] {
+		.responsivecolumns & {
+			@media @mobile {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.widget {
+		.responsivecolumns {
+			margin: 30px 0 0 0;
+
+			@media @mobile {
+				margin: 0 0 30px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		.column {
+			@columns-tablet {
+				margin-bottom: 1.5em;
+			}
+
+			@columns-mobile {
+				margin-bottom: 1em;
+			}
+
+			@media @mobile {
+				margin-bottom: 30px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+// -----------------------------
+// #Line Widget
+// -----------------------------
+
+.widget[data-name="line"] {
+	
+}
+
+.line {
+    line-height: 0;
+}
+
+hr.line__rule {
+	height: 3px;
+	background-color: fade(@color__p--text, 60%);
+}
+
+// -----------------------------
+// #Space Widget
+// -----------------------------
+
+.widget[data-name="space"] {
+}
+
+.space {
+}
+
+.space__spacer {
+}
+
+// -----------------------------
+// #Page Title Widget
+// -----------------------------
+
+.page-title {
+}
+
+.pagetitle-text {
+    h1;
+}

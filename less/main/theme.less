@@ -1,0 +1,144 @@
+// ----------------------------------------
+// Agentour: LESS > Main > Theme
+// ----------------------------------------
+// This contains all styles that are not
+// widgets.
+//
+// #Header
+// #Site Styles
+// #Header
+// #Page Styles
+// #Content
+// #Footer
+//
+// ----------------------------------------
+
+// ------------------------------
+// #Header
+// ------------------------------
+
+.template__header {
+	display: flex;
+	display: -webkit-flex;
+	-webkit-align-items: center;
+    align-items: center;
+	position: relative;
+	background-color: @color__header--background;
+	min-height: 150px;
+	border-bottom: 10px solid @color__header--border;
+	.header-border-removal();
+}
+
+.template__header div {
+	-webkit-flex: 1;  /* Safari 6.1+ */
+	-ms-flex: 1;  /* IE 10 */    
+    flex: 1;
+}
+
+
+// ------------------------------
+// #Site Styles
+// ------------------------------
+
+* {
+	.box-sizing(border-box);
+	margin: 0;
+    padding: 0;
+	
+	&:focus {
+		outline: none;
+	}
+}
+
+html, body {
+    background-color: @color__body--background;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	font-smooth: always;
+	font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: geometricPrecision;
+	
+	.make-font-a-little-smaller(@font__p--font-size);
+	.make-font-smaller(@font__p--font-size);
+	.make-font-a-lot-smaller(@font__p--font-size);
+	
+	// iOS fix of VH unit
+    width: -webkit-calc(100% - 0px);
+}
+
+
+// Site Container
+.site-container {
+    width: 100%;
+    background-color: @color__container--background;
+
+    @media @bp-global-above-fullwidth {
+        width: 90%;
+        max-width: @value__container--width;
+        margin: 0 auto;
+    }
+}
+
+
+// HTML5 Semantic Elements
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+	display: block;
+}
+
+// ------------------------------
+// #Page Styles
+// ------------------------------
+
+.page {}
+
+// ------------------------------
+// #Content
+// ------------------------------
+
+// Main
+
+.template__content {
+	padding-top: @header-height;
+	
+	.page--home & {
+		padding-top: 0;
+	}
+}
+
+// Container
+
+.container {
+	.display-flex(flex);
+	.justify-content(space-between, distribute);
+	.align-items(center, center);
+
+	@media @mobile {
+		display: block;
+	}
+}
+
+// ------------------------------
+// #Footer
+// ------------------------------
+
+.template__footer {
+    width: 100%;
+    background-color: @color__footer--background;
+    text-align: center;
+    border-top: 10px solid @color__footer--border;
+	.footer-border-removal()
+
+    // Widget
+    .widget {
+		padding: 40px 70px;
+		
+        @media @tablet-horizontal {
+            padding: 30px 40px;
+        }
+        @media @tablet {
+            padding: 20px 20px;
+        }
+    }
+}
