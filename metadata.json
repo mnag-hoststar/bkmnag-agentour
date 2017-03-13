@@ -119,13 +119,11 @@
     "styles": {
         "colors": {
             "color__primary": "@color-swatch1",
-            "color__secondary": "@color-swatch2",
-            "color__tertiary": "@color-swatch3"
+            "color__secondary": "@color-swatch2"
         },
         "site": {
             "color__body--background": "#eef1f6",
             "color__container--background": "#fff",
-            "value__container--width": "1400px",
             "color__link--text": "#314beb",
             "font__companyname--font-family": "@font-swatch10-font-family",
             "font__companyname--font-size": "19px",
