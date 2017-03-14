@@ -75,12 +75,11 @@
     text-align: left;
 
     @media @tablet {
-        opacity: 1 !important;
-		-webkit-transform: translateY(0) !important;
-		-moz-transform: translateY(0) !important;
-		-ms-transform: translateY(0) !important;
-		-o-transform: translateY(0) !important;
-		transform: translateY(0) !important;
+        width: 80%;
+    }
+    @media @mobile {
+        width: 100%;
+        margin: 0;
     }
 }
 
@@ -90,7 +89,14 @@
     margin: 15px 0;
     padding: 0;
     color: @color__feature-headline--text;
-
+    @media @tablet {
+        font-size: @font__feature-headline--font-size * 0.8;
+        line-height: @font__feature-headline--line-height * 0.8;
+    }
+    @media @mobile {
+        font-size: @font__feature-headline--font-size * 0.5;
+        line-height: @font__feature-headline--line-height * 0.5;
+    }
 }
 
 // Strapline
@@ -100,6 +106,14 @@
     margin: 15px 0;
     padding: 0;
     color: @color__feature-strapline--text;
+    @media @tablet {
+        font-size: @font__feature-strapline--font-size * 0.9;
+        line-height: @font__feature-strapline--line-height * 0.9;
+    }
+    @media @mobile {
+        font-size: @font__feature-strapline--font-size * 0.8;
+        line-height: @font__feature-strapline--line-height * 0.8;
+    }
 }
 
 // Button
