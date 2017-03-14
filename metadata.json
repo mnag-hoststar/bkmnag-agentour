@@ -167,6 +167,10 @@
         "header": {
             "color__header--background" : "#eef1f6"
         },
+        "footer": {
+            "color__footer--background" : "#eef1f6",
+            "color__footer--border" : "#fff"
+        },
         "navigation": {
             "font__navigation--font-family": "@font-swatch6-font-family",
             "font__navigation--font-size": "13px",

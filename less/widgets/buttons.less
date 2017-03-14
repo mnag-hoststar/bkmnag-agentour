@@ -150,7 +150,7 @@ a.ecomproduct__button {
 }
 
 .social-item {
-	margin: 0.5em 1em;
+	margin: 0.8em;
 	padding: 0;
 	width: 36px;
 	height: 36px;
@@ -164,8 +164,9 @@ a.ecomproduct__button {
 	text-align: center;
 	line-height: 32px;
 	border: 2px solid @color__button--background !important;
-	color: @color__button--text;
+	color: @color__button--text !important;
 	.transition (all, 0.5s, ease);
+	.border-radius(4px);
 
 	&:hover {
 		text-decoration: none;
