@@ -30,7 +30,6 @@
 // ------------------------------
 
 .product-filters {
-    border-bottom: 1px solid darken(@color__container--background, 10%);
 	
 	// Legend
 
@@ -172,17 +171,11 @@
     }
 
     .input {
-        padding-left: 14px;
-		.box-shadow(none);
-        background-color: @color__secondary;
-        .heading--4;
         font-size: 14px;
     }
 
 
     .button--submit {
-        border-left: 1px solid darken(@color__secondary, 8%);
-        line-height: 44px;
 
         @media @tablet-horizontal {
             width: 50px;
@@ -360,6 +353,7 @@
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
+    border-top: 1px solid fade(@color__p--text, 16%);
 	
 	.responsivecolumns & {
 		border-left: 1px solid rgba(66,77,81,0.16);

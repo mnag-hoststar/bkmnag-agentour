@@ -72,7 +72,7 @@
 
     .table-row:not(.table-row--heading):not(.table-row--order-total) {
         .cell  {
-            background-color: @color__secondary;
+            background-color: @color__primary;
         }
     }
 	
@@ -175,9 +175,8 @@
 		.button--quantity {
 			width: 30px;
 			height: 30px;
-			line-height: 30px;
+			line-height: 26px;
 			text-align: center;
-			background-color: darken(@color__button--background, 5%);
 			
             @media @basketsummary-medium, @mobile {
                 line-height: 20px;
@@ -229,15 +228,14 @@
         width: 100px;
         height: 100px;
         display: block;
-        background-position: -100%;
+        background-position: center;
         background-color: #fff;
-        padding: 10px;
+        background-size: contain;
 
         // Image
 
         .image {
-            display: inline-block;
-            vertical-align: middle;
+            display: none;
         }
     }
 
@@ -270,7 +268,5 @@
     }
 
     .button--submit {
-        background-color: @color__primary;
-        color: @color__container--background;
     }
 }

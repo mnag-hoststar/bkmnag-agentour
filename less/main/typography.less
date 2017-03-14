@@ -172,10 +172,10 @@ span {
 
 a {
 	display: inline;
-	color: @color__p--text;
+	color: @color-highlight;
 	line-height: 1.3em;
 	overflow: visible;
-	border-bottom: 4px solid @color-highlight--light;
+	border-bottom: 2px solid @color-highlight--light;
 	background-color: transparent;
 	margin: 0 -2px;
 	padding: 0 2px;
@@ -187,8 +187,8 @@ a {
     }
 	
 	&:hover {
-		background-color: fade(@color__link--text, 60%);
-		border-bottom: 4px solid @color-highlight--light;
+		background-color: @color-highlight--lighter;
+		border-bottom: 2px solid @color-highlight--light;
 	}
 }
 

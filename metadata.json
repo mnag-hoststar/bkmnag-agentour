@@ -19,7 +19,7 @@
     "colorSwatches":
     {
         "Swatch 1": {
-            "color1":"#ffffff",
+            "color1":"#eef1f6",
             "color2":"#2f3033",
             "color3":"#494949",
             "color4":"#424D51",
@@ -66,7 +66,7 @@
             "font-family": "\"PT Serif\", Georgia, serif",
             "font-size": "18px",
             "font-weight": "400",
-            "line-height": "27px",
+            "line-height": "32px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
@@ -124,7 +124,7 @@
         "site": {
             "color__body--background": "#eef1f6",
             "color__container--background": "#fff",
-            "color__link--text": "#314beb",
+            "color__link--text": "#e26f5c",
             "font__companyname--font-family": "@font-swatch10-font-family",
             "font__companyname--font-size": "19px",
             "font__companyname--font-weight": "700",
@@ -158,11 +158,11 @@
             "font__h4--letter-spacing" : "@font-swatch4-letter-spacing",
             "color__h4--text": "#30323e",
             "font__p--font-family" : "@font-swatch5-font-family",
-            "font__p--font-size" : "15px",
+            "font__p--font-size" : "18px",
             "font__p--font-weight" : "400",
-            "font__p--line-height" : "30px",
+            "font__p--line-height" : "32px",
             "font__p--letter-spacing" : "@font-swatch5-letter-spacing",
-            "color__p--text": "#747682"
+            "color__p--text": "#515151"
         },
         "header": {
             "color__header--background" : "#eef1f6"
@@ -178,8 +178,10 @@
             "color__navigation--text--selected": "#e26f5c"
         },
         "form": {
+            "color__form--border" : "#eef1f6",
             "color__form-legend--text" : "#fff",
             "color__form-legend--background": "@color__primary"
+
         },
         "button": {
             "color__button--background" : "@color__secondary",
@@ -189,7 +191,7 @@
             "font__button--font-family" : "@font-swatch7-font-family",
             "font__button--font-size" : "15px",
             "font__button--font-weight" : "700",
-            "font__button--line-height" : "30px",
+            "font__button--line-height" : "38px",
             "font__button--letter-spacing" : "inherit"
         },
         "gallery": {
