@@ -16,14 +16,14 @@
 // ------------------------------
 
 .template__company {
-	display: inline-block;
-//	float: left;
-	vertical-align: middle;
-	margin-right: 1em;
-	padding: 0;
+	-webkit-flex: 1;
+	-ms-flex: 1;   
+    flex: 1;
 	
 	@media @tablet {
-		margin-right: 4em;
+		-webkit-flex: 5;
+		-ms-flex: 5;  
+	    flex: 5;
 	}
 	
 	.widget {
@@ -68,19 +68,35 @@
 // #Navigation
 // ------------------------------
 
+
+html.nav-open {
+	overflow: hidden;
+}
+
 .template__navigation {
-	display: inline-block;
+	-webkit-flex: 2;
+	-ms-flex: 2; 
+    flex: 2;
+    @media @tablet {
+		-webkit-flex: 1;
+		-ms-flex: 1;   
+		flex: 1;
+    }
 }
 
 .widget[data-widget-type="extendednavigation"] {
+	//padding: 0;
+	//position: static;
 	&.open {
-		@media @tablet {
-			position: absolute;
-			top: 0;
-			right: 0;
-			left: 0;
-			bottom: 0;
-		}
+		
+	}
+	@media @tablet {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 1000;
 	}
 }
 
@@ -106,7 +122,7 @@
 		padding: 0;
 		display: block;
 		position: absolute;
-		top: 0;
+		top: 40px;
 		right: 0;
 		margin: 28px 20px;
 		font-size: 26px;
@@ -217,10 +233,12 @@
 			display: block;
 			opacity: 1;
 			width: auto;
+			width: 100vw;
 			overflow: auto;
 			height: auto;
 			height: 100vh;
-			background-color: rgba(0,0,0, 0.9);
+			background-color: fade(@color__body--background, 90%);
+			margin: 0 -5%;
 			.transition(opacity, 0.25s);
 		}
 	}
@@ -238,7 +256,7 @@
 		display: block;
 		height: auto;
 		max-width: 500px;
-		margin: 3em auto 0;
+		margin: 150px auto 0;
 		text-align: center;
 	}
 }
@@ -260,7 +278,7 @@
 	
 	.item-name {
 		position: relative;
-		padding: 0 0.5em 0 1em;
+		padding: 0 1.5em;
 		text-transform: uppercase;
 		font-family: @font__navigation--font-family;
 		font-size: @font__navigation--font-size;
@@ -334,20 +352,22 @@
 	.navigation-item.folder:active & {
     	overflow: hidden;
 		opacity: 0;
-    	margin: 0;
+    	margin: 1em 0;
 		height: 0;
 		position: absolute;
-		margin: 0;
 		padding: 0.5em 0;
 		background-color: @color__navigation-list--background;
 		overflow: visible;
 		text-align: center;
 		.transition(opacity, 0s);
+		.box-shadow(0px 5px 20px 0px fade(@color__button--background, 20%));
 
 		@media @tablet {
 			position: static;
 			margin: 0;
 			padding: 0;
+			background-color: transparent;
+			.box-shadow(none);
 		}
 	}
 	
@@ -376,10 +396,9 @@
 
 	.item-name {
 		color: @color__navigation--text;
-		line-height: 2em;
+		line-height: 3em;
 
 		@media @tablet {
-			padding: 1em 0;
 		}
 		
 		&:hover {

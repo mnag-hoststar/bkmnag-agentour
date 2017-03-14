@@ -177,6 +177,7 @@
             "font__navigation--font-weight": "700",
             "font__navigation--line-height": "26px",
             "font__navigation--letter-spacing": "2px",
+            "color__navigation-list--background" : "#fff",
             "color__navigation--text": "#2f3033",
             "color__navigation--text--hover" : "#000",
             "color__navigation--text--selected": "#e26f5c"
