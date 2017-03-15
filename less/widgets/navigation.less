@@ -19,6 +19,7 @@
 	-webkit-flex: 1;
 	-ms-flex: 1;   
     flex: 1;
+    z-index: 2;
 	
 	@media @tablet {
 		-webkit-flex: 5;
@@ -96,7 +97,7 @@ html.nav-open {
 		right: 0;
 		left: 0;
 		bottom: 0;
-		z-index: 1000;
+		z-index: 1;
 	}
 }
 
@@ -278,7 +279,8 @@ html.nav-open {
 	
 	.item-name {
 		position: relative;
-		padding: 0 1.5em;
+		padding: .5em 0;
+		margin: 0 1.5em;
 		text-transform: uppercase;
 		font-family: @font__navigation--font-family;
 		font-size: @font__navigation--font-size;
@@ -286,6 +288,7 @@ html.nav-open {
 		line-height: @font__navigation--line-height;
 		letter-spacing: @font__navigation--letter-spacing;
 		color: @color__navigation--text;
+		border-bottom: 1px solid transparent;
 	
 		@media @tablet {
 			padding: 0.5em 0;
@@ -296,19 +299,24 @@ html.nav-open {
 		.make-font-a-lot-smaller(@font__navigation--font-size);
 		
 		&:hover {
-			color: darken(@color__navigation--text, 20%);
+			color: @color__navigation--text--hover;
+			border-bottom: 1px solid @color__navigation--text--hover;
+
 			
 			@media @tablet {
-				color: darken(@color__navigation--text, 20%);
+				color: @color__navigation--text--hover;
+				border-bottom: 0;
 			}
 		}
 	}
 
 	&.selected > .item-name {
-		color: @color__navigation--text--hover;
+		color: @color__navigation--text--selected;
+		border-bottom: 1px solid @color__navigation--text--selected;
 
 		@media @tablet {
-			color: darken(@color__navigation--text, 60%);
+			color: @color__navigation--text--selected;
+			border-bottom: 0;
 		}
 	}
 

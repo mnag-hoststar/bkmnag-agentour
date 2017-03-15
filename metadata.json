@@ -176,10 +176,10 @@
             "font__navigation--font-size": "13px",
             "font__navigation--font-weight": "700",
             "font__navigation--line-height": "26px",
-            "font__navigation--letter-spacing": "2px",
+            "font__navigation--letter-spacing": "inherit",
             "color__navigation-list--background" : "#fff",
             "color__navigation--text": "#2f3033",
-            "color__navigation--text--hover" : "#000",
+            "color__navigation--text--hover" : "#e26f5c",
             "color__navigation--text--selected": "#e26f5c"
         },
         "form": {
@@ -224,9 +224,9 @@
             "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing",
             "color__feature-strapline--text" : "#515151",
             "color__feature-button--text" : "#fff",
-            "color__feature-button--border" : "transparent",
+            "color__feature-button--border" : "#e26f5c",
             "color__feature-button--background" : "#e26f5c",
-            "color__feature-button--background--hover" : "darken(@color__feature-button--background, 4%)"
+            "color__feature-button--background--hover" : "transparent"
         },
         "menu": {
             "color__menusections--background" : "@color__secondary",

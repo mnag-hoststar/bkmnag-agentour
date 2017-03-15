@@ -1,5 +1,5 @@
 // ----------------------------------------
-// Duotone: LESS > Plugins > Blog > Blog Post
+// Agentour: LESS > Plugins > Blog > Blog Post
 // ----------------------------------------
 //
 // #Article
@@ -60,6 +60,9 @@
 // ------------------------------
 
 .blogpost {
+	&__post-content {
+		margin-bottom: 2em;
+	}
 	&__post-content,
 	&__post-footer {
 		margin: 0 auto;
@@ -73,8 +76,7 @@
     &__post-title {
         margin: 0;
         padding: 0;
-        .heading--2;
-        color: @color__blogpostlist-title--text;
+        .heading--1;
     }
 }
 
@@ -91,14 +93,7 @@
 // ------------------------------
 
 .blogpost__post-footer .timestamp {
-	position: absolute;
-	top: -4.5em;
-    left: 0;
-    right: auto;
-	display: block;
-	margin: 0;
-	background-color: @color-text--lightest;
-	.timestamp-styles;
+	font-size: @font__p--font-size * 0.8;
 }
 
 // ------------------------------
@@ -106,9 +101,10 @@
 // ------------------------------
 
 .blogpost__post-attributes {
-	display: table;
-	margin: 5em 0 2em;
+	//display: table;
+	margin: 3em 0 2em;
 	padding: 2em 0 0;
+	position: relative;
 	
 	@media @mobile {
 		display: block;
@@ -130,11 +126,16 @@
 // ------------------------------
 
 .post-category, .post-tags {
-    display: table-cell;
+    //display: table-cell;
 	
 	@media @mobile {
     	display: block;
 	}
+}
+
+.category-title, .tags-title {
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .post-category {
@@ -143,6 +144,10 @@
 	@media @mobile {
     	padding: 0;
 	}
+}
+
+.tag-list {
+	vertical-align: bottom;
 }
 
 .post-tags {
