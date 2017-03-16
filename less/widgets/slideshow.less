@@ -1,5 +1,5 @@
 // ----------------------------------------
-// Duotone: LESS > Widgets > Slideshow
+// Agentour: LESS > Widgets > Slideshow
 // ----------------------------------------
 //
 // #Slideshow Mixins
@@ -28,26 +28,15 @@
 // ------------------------------
 
 .widget[data-name="responsiveslideshow"] .responsiveslideshow {
-	position: relative;
-	overflow: hidden;
-	width: auto;
-	max-width: none;
-	height: 40vw;
-	padding-bottom: 40%;
-	background-color: @color__slideshow--background;
 	
 	@media @tablet-horizontal {
-		height: 60vw;
-		padding-bottom: 60%;
 	}
 }
 
-.responsiveslideshow__slides-list {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+.responsiveslideshow__figure, .responsiveslideshow__slides-list {
+	min-height: 100px;
+    max-height: 700px;
+    padding-bottom: 60%;
 }
 
 // ------------------------------

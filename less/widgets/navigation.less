@@ -19,7 +19,7 @@
 	-webkit-flex: 1;
 	-ms-flex: 1;   
     flex: 1;
-    z-index: 2;
+    z-index: 3;
 	
 	@media @tablet {
 		-webkit-flex: 5;
@@ -97,7 +97,7 @@ html.nav-open {
 		right: 0;
 		left: 0;
 		bottom: 0;
-		z-index: 1;
+		z-index: 2;
 	}
 }
 
@@ -288,35 +288,37 @@ html.nav-open {
 		line-height: @font__navigation--line-height;
 		letter-spacing: @font__navigation--letter-spacing;
 		color: @color__navigation--text;
-		border-bottom: 1px solid transparent;
-	
+		border-bottom: 2px solid transparent;
+		.transition (all, 0.5s, ease);
 		@media @tablet {
 			padding: 0.5em 0;
+			font-size: @font__navigation--font-size * 1.2;
+			line-height: @font__navigation--line-height * 1.2;
 		}
 	
-		.make-font-a-little-smaller(@font__navigation--font-size);
-		.make-font-smaller(@font__navigation--font-size);
-		.make-font-a-lot-smaller(@font__navigation--font-size);
+		//.make-font-a-little-smaller(@font__navigation--font-size);
+		//.make-font-smaller(@font__navigation--font-size);
+		//.make-font-a-lot-smaller(@font__navigation--font-size);
 		
 		&:hover {
 			color: @color__navigation--text--hover;
-			border-bottom: 1px solid @color__navigation--text--hover;
-
+			border-bottom: 2px solid @color__navigation--text--hover;
+			.transition (all, 0.5s, ease);
 			
 			@media @tablet {
 				color: @color__navigation--text--hover;
-				border-bottom: 0;
+				border-bottom: 2px solid transparent;
 			}
 		}
 	}
 
 	&.selected > .item-name {
 		color: @color__navigation--text--selected;
-		border-bottom: 1px solid @color__navigation--text--selected;
+		border-bottom: 2px solid @color__navigation--text--selected;
 
 		@media @tablet {
 			color: @color__navigation--text--selected;
-			border-bottom: 0;
+			border-bottom: 2px solid transparent;
 		}
 	}
 
@@ -405,12 +407,14 @@ html.nav-open {
 	.item-name {
 		color: @color__navigation--text;
 		line-height: 3em;
+		border-bottom: 0;
 
 		@media @tablet {
 		}
 		
 		&:hover {
 			color: @color__navigation--text--hover;
+			border-bottom: 0;
 		}
 	}
 

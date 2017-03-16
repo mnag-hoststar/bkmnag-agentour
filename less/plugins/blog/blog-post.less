@@ -60,15 +60,14 @@
 // ------------------------------
 
 .blogpost {
-	&__post-content {
-		margin-bottom: 2em;
-	}
 	&__post-content,
 	&__post-footer {
 		margin: 0 auto;
 		.template__content--width();
     }
-	
+	&__post-content {
+		margin-bottom: 2em;
+	}
     &__post-header {
         padding: 2em 0 1em;
     }
@@ -159,8 +158,8 @@
 	}
 }
 
-.blogpost__category-link,
-.blogpost__tag-link {
+a.blogpost__category-link,
+a.blogpost__tag-link {
     hyphens: none;
 }
 
@@ -185,37 +184,15 @@
 
 .blogpost__button {
 	&, &:hover {
-		margin: 0;
-		padding: 0;
-		.box-shadow(none);
-		background-color: transparent;
-		border: none;
 		font-family: @font__p--font-family;
-		font-size: @font__p--font-size;
+		font-size: @font__p--font-size * 0.85;
 		font-weight: @font__p--font-weight;
-		line-height: @font__p--line-height;
-		letter-spacing: @font__p--letter-spacing;
-		color: @color__p--text;
-		text-transform: none;
-	
-		.make-font-a-little-smaller(@font__p--font-size);
-		.make-font-smaller(@font__p--font-size);
-		.make-font-a-lot-smaller(@font__p--font-size);
 	}
-	
 	&:before {
-		.transition();
-		float: left;
-		padding: 0.2em;
-		background: @color-text--lightest;
-		width: 1.5em;
-		height: 1.5em;
-		margin-top: -0.2em;
-		
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 22px;
 	}
-	
 	&:hover:before {
-		background: @color__button--background;
-		color: @color__button--text;
 	}
 }
