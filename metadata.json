@@ -5,7 +5,8 @@
     "templateType":"standard",
     "pageTypes": [ "home" ],
     "screenshot":"agentour-screenshot.jpg",
-     "images":[
+    "images":[
+        "images/feature-image.jpg",
         "images/gallery/gallery-image--1.jpg",
         "images/gallery/gallery-image--2.jpg",
         "images/gallery/gallery-image--3.jpg",
@@ -13,8 +14,7 @@
         "images/gallery/gallery-image--5.jpg",
         "images/gallery/gallery-image--6.jpg",
         "images/gallery/gallery-image--7.jpg",
-        "images/gallery/gallery-image--8.jpg",
-        "images/gallery/gallery-image--9.jpg"
+        "images/gallery/gallery-image--8.jpg"
     ],
     "colorSwatches":
     {
