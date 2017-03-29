@@ -63,7 +63,8 @@
 	&__post-content,
 	&__post-footer {
 		margin: 0 auto;
-		.template__content--width();
+		width: 80%;
+		max-width: 900px;
     }
 	&__post-content {
 		margin-bottom: 2em;
@@ -173,12 +174,12 @@ a.blogpost__tag-link {
 
 .blogpost__network-item {
 	display: inline-block;
-    margin: 0 1em 0 0;
+    margin-right: 1em;
 	padding: 0;
 	
-	@media @mobile {
+	@media @tablet {
 		display: block;
-    	margin: 0;
+    	margin-bottom: 1em;
 	}
 }
 

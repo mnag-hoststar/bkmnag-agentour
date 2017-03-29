@@ -50,15 +50,7 @@
 	form {
 		max-width: @layout-width-desktop;
 		margin: 0 auto;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-align-content: flex-start;
-		-ms-flex-line-pack: start;
-		align-content: flex-start;
-		-webkit-align-items: center;
-		-ms-flex-align: center;
-		align-items: center;
+		margin-bottom: 2em;
 
 		@media (max-width: 1024px) {
 			display: block;
@@ -83,8 +75,6 @@
 }
 
 .product-filters .fieldset--search {
-	padding: 20px 40px;
-	width: 100%/3;
 
 	@media (max-width: 1024px) {
 		width: 100%;
@@ -129,6 +119,7 @@
         -webkit-align-items: stretch;
         -ms-flex-align: stretch;
         align-items: stretch;
+        margin-bottom: 1em;
     }
 
     // Form Group
@@ -147,6 +138,7 @@
         -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
+        padding-right: 0.5em;
     }
 
     // Last Form Group
@@ -171,7 +163,7 @@
     }
 
     .input {
-        font-size: 14px;
+        height: 45px;
     }
 
 
@@ -197,6 +189,7 @@
                 bottom: 0;
                 right: 0;
                 text-indent: 0;
+                margin-left: 0;
             }
         }
         @media @mobile {
@@ -211,9 +204,6 @@
 // ------------------------------
 
 .product-filters .fieldset--filters {
-    padding: 12px 70px 8px;
-    width: 100%*2/3;
-    // background-color: @color__ecomproductslist-filters--background;
 
     @media (max-width: 1024px) {
         width: 100%;
@@ -261,7 +251,6 @@
 		-ms-flex: 1 1 auto;
 		flex: 1 1 auto;
 		margin-right: 5%;
-		width: 24%;
 		margin-bottom: 0;
 
 		&:last-of-type {
@@ -293,6 +282,8 @@
 		// Select Wrap
 
 		.select-wrap {
+			margin-top: 0;
+			max-width: none;
 			@media @tablet-horizontal {
 				.select.medium;
 			}

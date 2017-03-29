@@ -183,8 +183,8 @@
             "color__navigation--text--selected": "#e26f5c"
         },
         "form": {
-            "color__form--border" : "#eef1f6",
-            "color__form-legend--text" : "#fff",
+            "color__form--border" : "#e1e5eb",
+            "color__form-legend--text" : "#515151",
             "color__form-legend--background": "@color__primary"
 
         },

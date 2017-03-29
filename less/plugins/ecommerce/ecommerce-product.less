@@ -64,7 +64,7 @@
 .product-image {
     background-color: #fff;
     padding: 10px;
-	margin: 70px 70px 70px 176px;
+	margin: 2em 2em 2em 10em;
 	
     @media @tablet-horizontal {
         margin: 40px;
@@ -89,7 +89,6 @@
 		background-size: contain;
 		background-position: center;
 		background-color: #fff;
-		padding: 26px;
 		height: 400px;
 
 		@media @tablet-horizontal {
@@ -122,16 +121,17 @@
 	position: absolute;
 	top: 70px;
 	left: 70px;
-	height: 560px;
 	margin: 0;
 	.inline-block-font-hack();
 
     @media @tablet-horizontal {
-        margin: 40px;
+        margin: 0 40px;
         position: relative;
         max-width: 390px;
         overflow: hidden;
         height: 60px;
+        top: 0;
+        left: 0;
     }
 
     @media @tablet, @mobile {
@@ -209,7 +209,8 @@
     -ms-flex: 0 1 50%;
     flex: 0 1 50%;
     background: @color__container--background;
-    padding: 70px;
+    margin: 0 auto;
+    max-width: @layout-width-desktop;
 
     @media @tablet-horizontal {
         padding: 40px;
