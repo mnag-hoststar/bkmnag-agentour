@@ -1,5 +1,5 @@
 // -------------------------------------
-// Kings Template: JS > Navigation
+// Agentour: JS > Navigation
 // -------------------------------------
 
 $(document).ready(function(){
