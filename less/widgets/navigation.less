@@ -125,7 +125,7 @@ html.nav-open {
 		position: absolute;
 		top: 40px;
 		right: 0;
-		margin: 28px 20px;
+		margin: 28px 0 28px 20px;
 		font-size: 26px;
 		text-indent: 10000px;
 		.transition(background, 0s, ease-in, 0.05s);
@@ -362,11 +362,12 @@ html.nav-open {
 	.navigation-item.folder:active & {
 		position: absolute;
 		right: 0;
-    	overflow: hidden;
+		left: auto;
 		opacity: 0;
-    	margin: 1em 0;
-		height: 0;
+    	margin: 0.5em 0 0;
 		padding: 0.5em 0;
+		height: 0;
+		width: auto;
 		background-color: @color__navigation-list--background;
 		overflow: visible;
 		text-align: center;
@@ -377,7 +378,6 @@ html.nav-open {
 			position: static;
 			margin: 0;
 			padding: 0;
-			background-color: transparent;
 			.box-shadow(none);
 		}
 	}
@@ -387,7 +387,6 @@ html.nav-open {
 		display: block;
 		opacity: 1;
 		height: auto;
-		width: auto;
 		.transition(opacity);
 
 		@media @tablet {
