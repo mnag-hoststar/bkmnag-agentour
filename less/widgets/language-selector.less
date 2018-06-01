@@ -67,8 +67,7 @@
 
 .language-selector__inner {
     .language-selector & {
-	    box-sizing: content-box;
-    	padding: @language-padding @language-padding*2 @language-padding @language-padding;
+    	padding: @language-padding @language-padding/2;
 		max-width: 1400px;
 		width: 90%;
 		margin: 0 auto;
@@ -78,7 +77,7 @@
 	}
     
     .language-selector.language-selector--horizontal & {
-    	padding: @language-padding;
+    	padding: @language-padding @language-padding/2;
     }
 
 	.language-selector.language-selector--dropdown & {
@@ -243,14 +242,27 @@
 	// Link Color
 	
 	.language-selector.language-selector--horizontal &,
-	.language-selector.language-selector--horizontal .language-selector__item--current &,
-	.language-selector.language-selector--dropdown &,
-	.language-selector.language-selector--dropdown .language-selector__item--current & {
+	.language-selector.language-selector--horizontal .language-selector__item--current & {
 		.language-selector--light&,
 		.language-selector--dark& {
 			&,
 			&:hover {
 				background-color: transparent;
+			}
+		}
+	}
+	.language-selector.language-selector--dropdown &,
+	.language-selector.language-selector--dropdown .language-selector__item--current & {
+		.language-selector--light& {
+			background-color: @color__body--background;
+			&:hover {
+				background-color: darken(@color__body--background, 5%);
+			}
+		}
+		.language-selector--dark& {
+			background-color: @color__container--background;
+			&:hover {
+				background-color: darken(@color__container--background, 5%);
 			}
 		}
 	}
@@ -280,6 +292,7 @@
 	.language-selector.language-selector--horizontal.language-selector--flag .language-selector__item & {
 	    padding: 0;
 		border: 2px solid transparent;
+	    line-height: 1em;
 		
 		&:hover {
 		    border: 2px solid @color__navigation--text--hover;
@@ -287,7 +300,12 @@
 	}
 	
 	.language-selector.language-selector--horizontal.language-selector--flag .language-selector__item--current & {
-	    border: 2px solid @color__navigation--text--hover;
+	    border: 2px solid @color__navigation--text--selected;
+	    line-height: 1em;
+		
+		&:hover {
+		    border: 2px solid @color__navigation--text--hover;
+	    }
 	}
 }
 
@@ -302,6 +320,7 @@
 		-moz-osx-font-smoothing: auto;
 		font-smooth: auto;
 		text-rendering: auto;
+		.transition (all, 0.5s, ease);
 		
 		&:hover {
 		    color: @color__navigation--text--hover;
@@ -310,11 +329,21 @@
 	
 	.language-selector.language-selector--horizontal & {
 		border-bottom: 2px solid transparent;
+		
+		&:hover {
+		    color: @color__navigation--text--hover;
+		    border-bottom: 2px solid @color__navigation--text--hover;
+		}
 	}
 	
 	.language-selector.language-selector--horizontal .language-selector__item--current & {
-		color: @color__navigation--text--hover;
-		border-bottom: 2px solid @color__navigation--text--hover;
+		color: @color__navigation--text--selected;
+		border-bottom: 2px solid @color__navigation--text--selected;
+		
+		&:hover {
+		    color: @color__navigation--text--hover;
+		    border-bottom: 2px solid @color__navigation--text--hover;
+	    }
 	}
 	
 	.language-selector.language-selector--flag-text & {
