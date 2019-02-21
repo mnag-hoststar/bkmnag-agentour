@@ -54,6 +54,7 @@
 		letter-spacing: @font__companyname--letter-spacing;
 		color: @color__companyname--text;
 		text-transform: uppercase;
+		word-wrap: anywhere;
 
 		.make-font-a-little-smaller(@font__companyname--font-size);
 		.make-font-smaller(@font__companyname--font-size);
@@ -112,42 +113,47 @@ html.nav-open {
 	display: none;
 	
 	@media @tablet {
-		
 		// Displays as Icon's Middle Bar
-		z-index: 100;
-		cursor: pointer;
-		background: @color__navigation--text;
-		background-clip: content-box;
-		width: 28px;
-		height: 3px;
-		padding: 0;
-		display: block;
+		z-index: 200;
+		overflow: hidden;
 		position: absolute;
-		top: 40px;
-		right: 0;
-		margin: 28px 20px;
+		top: 50%;
+		right: 5%;
+		display: block;
+		cursor: pointer;
+		background-color: transparent;
+		background-clip: content-box;
+		margin: -11px 0;
+		padding: 0;
+		width: 28px;
+		height: 26px;
 		font-size: 26px;
 		text-indent: 10000px;
-		.transition(background, 0s, ease-in, 0.05s);
+		.transition(background 0.2s ease-in 0.05s);
+		.border-radius(0);
 
 		.make-font-a-little-smaller(@font__companyname--font-size);
 		.make-font-smaller(@font__companyname--font-size);
 		.make-font-a-lot-smaller(@font__companyname--font-size);
+	
+		.make-line-height-a-little-smaller(@font__companyname--line-height);
+		.make-line-height-smaller(@font__companyname--line-height);
+		.make-line-height-a-lot-smaller(@font__companyname--line-height);
 
 		// Top and Bottom Navigation Item Bar
-
+		
 		&:after,
 		&:before {
 			content: "";
-			height: 3px;
-			width: 28px;
 			position: absolute;
 			display: block;
-			background-color: @color__navigation--text;
+			height: 3px;
+			width: 28px;
 			margin-right: 0;
 			margin-left: 0;
-			.transition-duration(0.05s, 0.05s);
-			.transition-delay(0.05s, 0s);
+			background-color: @color__navigation--text;
+			.transition(all 0.05s ease-in-out);
+			.transition-delay(0.05s);
 
 			@media @mobile {
 				height: 2px;
@@ -155,57 +161,73 @@ html.nav-open {
 		}
 
 		// Top Bar
-		
 		&:before {
-			top: 0.4em;
-		  	.transition-property(top, transform);
+			top: 2px;
+			margin: 0;
+		  	.transition-property(top);
 		}
 
 		// Bottom Bar
-		
 		&:after {
-			bottom: 0.4em;
-			.transition-property(bottom, transform);
+			bottom: 2px;
+			.transition-property(bottom);
+		}
+
+		// Middle Bar
+		span {
+			display: block;
+			font-size: 0;
+			height: 3px;
+			width: 100%;
+			background-color: @color__navigation--text;
+			.transition(background-color 0.05s ease-in-out);
 		}
 
 		&:hover {
-			&, &:before, &:after {
+			background-color: transparent;
+			
+			&:before, &:after, span {
 				background-color: @color__navigation--text;
 			}
 		}
 	}
+		
+	@media only screen and (max-width: 420px) {
+		right: 0;
+	}
 
 	// Toggle Button Open
-
 	.open & {
 		@media @tablet {
 			
-			// Middle bar
-			
-			background: transparent;
-			
-			// Top and bottom bar
-			
+			// Top and bottom Bar
 			&:before,
 			&:after {
-			  .transition-delay(0s, 0.05s);
+				width: 30px;
+				.transition-delay(0.05s);
+		  		.transition-property(transform);
 			}
 			
 			// Top Bar
-
 			&:before {
-				top: 0;
+				top: 50%;
+				margin-top: -1.5px;
 				background: @color__navigation--text;
 				.transform-rotate(45deg);
 
 			}
 			
 			// Bottom Bar
-
 			&:after {
-				bottom: 0;
+				bottom: 50%;
+				margin-bottom: -1.5px;
 				background: @color__navigation--text;
 				.transform-rotate(-45deg);
+			}
+			
+			// Middle bar
+			span {
+				background: transparent;
 			}
 		}
 	}
