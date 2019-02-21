@@ -87,8 +87,6 @@ html.nav-open {
 }
 
 .widget[data-widget-type="extendednavigation"] {
-	//padding: 0;
-	//position: static;
 	&.open {
 		
 	}
@@ -113,7 +111,9 @@ html.nav-open {
 	display: none;
 	
 	@media @tablet {
+		
 		// Displays as Icon's Middle Bar
+		
 		z-index: 200;
 		overflow: hidden;
 		position: absolute;
@@ -161,6 +161,7 @@ html.nav-open {
 		}
 
 		// Top Bar
+		
 		&:before {
 			top: 2px;
 			margin: 0;
@@ -168,12 +169,14 @@ html.nav-open {
 		}
 
 		// Bottom Bar
+		
 		&:after {
 			bottom: 2px;
 			.transition-property(bottom);
 		}
 
 		// Middle Bar
+		
 		span {
 			display: block;
 			font-size: 0;
@@ -197,10 +200,12 @@ html.nav-open {
 	}
 
 	// Toggle Button Open
+	
 	.open & {
 		@media @tablet {
 			
 			// Top and bottom Bar
+			
 			&:before,
 			&:after {
 				width: 30px;
@@ -209,6 +214,7 @@ html.nav-open {
 			}
 			
 			// Top Bar
+			
 			&:before {
 				top: 50%;
 				margin-top: -1.5px;
@@ -218,6 +224,7 @@ html.nav-open {
 			}
 			
 			// Bottom Bar
+			
 			&:after {
 				bottom: 50%;
 				margin-bottom: -1.5px;
@@ -226,6 +233,7 @@ html.nav-open {
 			}
 			
 			// Middle bar
+			
 			span {
 				background: transparent;
 			}
