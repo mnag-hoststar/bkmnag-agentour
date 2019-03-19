@@ -192,17 +192,22 @@
 // ------------------------------
 
 .bk-cookie-container {
-	display: none; // TODO: set to "table" before publishing the template.
+	display: table;
 	text-align: left;
 	border: none;
 	position: fixed;
-	top: @header-height;
-	bottom: unset;
+	top: auto;
+	bottom: 0;
 	left: 0;
 	right: 0;
-	margin: 0;
-	text-align: center;
+	margin: 0 auto;
+	max-width: 1460px;
 	width: 100%;
+
+	@media @mobile {
+		left: 0;
+		width: 100%;
+	}
 	
 	p, a, .bk-cookie-close-button {
 		display: table-cell;
@@ -211,14 +216,18 @@
 	p, a {
 		.paragraph;
 		color: #fff;
+	}
+	
+	p {
+		padding: 0.5em 1em;
 		
 		&, &:hover {
 			color: #fff;
 		}
 	}
 	
-	p {
-		padding: 0.5em 1em 1em 1em;
+	p a {
+		color: @color__link--text;
 	}
 	
 	.bk-cookie-close-button {
@@ -226,7 +235,7 @@
 		vertical-align: middle;
 		padding: 1em 2em;
 		.appearance(none);
-		background-color: @color__button--background;
+		background-color: @color__button--background--hover;
 		font-family: @font__button--font-family;
 		font-size: @font__button--font-size;
 		font-weight: @font__button--font-weight;
@@ -235,10 +244,12 @@
 		color: @color__button--text;
 		text-transform: uppercase;
 		text-align: center;
+		.transition(all 0.25s ease-in-out 0s);
 		
 		&:hover {
 			padding: 1em 2em;
-			background-color: @color__button--background;
+			background-color: darken(@color__button--background--hover, 5%);
+			color: @color__button--text;
 		}
 	}
 }
