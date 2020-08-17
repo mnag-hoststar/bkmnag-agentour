@@ -1,6 +1,7 @@
 {
     "name":"Agentour",
     "widgetVersion": 2,
+    "versionTenCompatible": 1,
     "thumbnail":"agentour.png",
     "templateType":"standard",
     "pageTypes": [ "home" ],

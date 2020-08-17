@@ -118,6 +118,18 @@
 		content: " ";
 		border-bottom: 0.5em solid @color-text--lightest;
 		width: 100%;
+
+		.style--light & {
+			border-bottom: 0.5em solid darken(@color--light, 10%);
+	    }
+
+	    .style--accent & {
+	    	border-bottom: 0.5em solid darken(@color--accent, 10%);
+	    }
+
+	    .style--dark & {
+	    	border-bottom: 0.5em solid darken(@color--dark, 10%);
+	    }
 	}
 }
 
