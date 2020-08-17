@@ -65,6 +65,18 @@
     background-color: #fff;
     padding: 10px;
 	margin: 2em 2em 2em 10em;
+
+    .style--light & {
+        background-color: @color--light;
+    }
+
+    .style--accent & {
+        background-color: @color--accent;
+    }
+
+    .style--dark & {
+        background-color: @color--dark;
+    }
 	
     @media @tablet-horizontal {
         margin: 40px;
@@ -90,6 +102,18 @@
 		background-position: center;
 		background-color: #fff;
 		height: 400px;
+
+        .style--light & {
+            background-color: @color--light;
+        }
+
+        .style--accent & {
+            background-color: @color--accent;
+        }
+
+        .style--dark & {
+            background-color: @color--dark;
+        }
 
 		@media @tablet-horizontal {
 			padding: 20px;
@@ -152,6 +176,21 @@
 		margin-bottom: 16px;
 		line-height: 74px;
 
+        .style--light & {
+            background-color: @color--light;
+            border-color: @color--light;
+        }
+
+        .style--accent & {
+            background-color: @color--accent;
+            border-color: @color--accent;
+        }
+
+        .style--dark & {
+            background-color: @color--dark;
+            border-color: @color--dark;
+        }
+
         @media @tablet-horizontal, @tablet {
             float: left;
         }
@@ -211,6 +250,18 @@
     background: @color__container--background;
     margin: 0 auto;
     max-width: @layout-width-desktop;
+
+    .style--light & {
+        background-color: @color--light;
+    }
+
+    .style--accent & {
+        background-color: @color--accent;
+    }
+
+    .style--dark & {
+        background-color: @color--dark;
+    }
 
     @media @tablet-horizontal {
         padding: 40px;
@@ -310,6 +361,18 @@
         display: block;
         margin: 0 0 0.25em 0;
         font-size: 13px;
+
+        .style--light & {
+            color: @contrast--light;
+        }
+
+        .style--accent & {
+            color: @contrast--accent;
+        }
+
+        .style--dark & {
+            color: @contrast--dark;
+        }
     }
 	
     // Product Category, Product Tags
