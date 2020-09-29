@@ -121,6 +121,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     background-color: @color__footer--background;
     text-align: center;
     border-top: 10px solid @color__footer--border;
+    padding: 2em 0;
 	.footer-border-removal()
 	.container {
 	}
@@ -128,12 +129,11 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 	.widget {
 		width: 80%;
 		max-width: @layout-width-desktop;
-		margin: 2em auto;
+		margin: 0 auto;
 
-		@media @tablet-horizontal {
-		}
-		@media @tablet {
-		}
+        &:not(:last-child) {
+            margin-bottom: 2em;
+        }
 	}
 }
 

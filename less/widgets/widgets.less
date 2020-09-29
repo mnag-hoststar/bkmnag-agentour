@@ -42,7 +42,7 @@
 }
 
 .widget[data-name="content"], 
-.widget[data-name="contentgroup"],
+.row:not(.row--width-no-padding) .widget[data-name="contentgroup"],
 .widget[data-name="pagetitle"],
 .widget[data-widget-type="pagetitle"],
 .widget[data-name="responsivecolumns"],
@@ -144,9 +144,10 @@
 .widget[data-name="line"],
 .widget[data-name="image"],
 .widget[data-name="row"] {
-    margin-top: 0!important; // Ensures correct spacing for default pages
+    margin-top: 0; // Ensures correct spacing for default pages
     margin-left: 0;
     margin-right: 0;
+
     &:last-child {
         margin-bottom: 0;
     }
