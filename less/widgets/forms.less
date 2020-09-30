@@ -414,6 +414,7 @@ input:focus {
 					position: absolute;
 					top: 0.7em;
 					left: -2.5em;
+                    min-width: 0;
 					width: 1.5em;
 					height: 1.5em;
 					margin-top: -0.8em;
@@ -479,10 +480,26 @@ input:focus {
 		&[class*="form-group"] {
 			label {
 				&:after {
+                    border: 0;
 					content: "\f00c";
 					font-family: 'FontAwesome', sans-serif;
 					color: @color__button--background;
+                    margin: 0 auto;
 					left: -40px;
+                    top: 1px;
+                    transform: none;
+
+                    .style--light & {
+                        color: @contrast--light;
+                    }
+
+                    .style--accent & {
+                        color: @contrast--accent;
+                    }
+
+                    .style--dark & {
+                        color: @contrast--dark;
+                    }
 
                     @media @mobile {
                         left: -32px;
