@@ -1,0 +1,92 @@
+
+// -------------------------------------------
+//  Migration Styles -
+//
+//  These changes allow rows to work with
+//  existing templates in BK10
+// -------------------------------------------
+
+
+
+// Template styling resets
+// ------------------------------------
+    
+    
+#migrated {
+
+
+    // Remove container padding
+    .template__content {
+        padding-top: 0;
+    }
+    
+    // Remove spacing from last or only widget inside a row
+    [data-name="row"] .column .widget,
+    [data-name="row"] .widget:only-child {
+        margin-bottom: 0;
+    }
+
+    // Remove columns max-width from pricing layout
+    .row--layout-pricing-1a [data-name="responsivecolumns"] {
+        max-width: 100%;
+        width: 100%;
+
+        @media @tablet {
+            width: 90%;
+        }
+    }
+
+    // Hides opaque bars on row overlay, useful for contained width sites
+    .row-overlay:before,
+    .row-overlay:after {
+        display: none;
+    }
+}
+
+
+
+// Re-add the reset styles
+// ------------------------------------
+
+
+#migrated {
+
+    // Replaces main padding by moving this to the first widget in the zone
+    &.edit #page-zones__main-overlay + .widget:not([data-name="row"]) {
+        margin-top: 0;           // Main padding top
+    }
+
+    // Remove spacing from certain widgets not inside rows
+    #page-zones__main > .widget {
+        &:not([data-name="row"]),
+        &:not([data-name="responsiveslideshow"]),
+        &:not([data-widget-type="responsiveslideshow"]),
+        &:not([data-name="youtube"]),
+        &:not([data-name="map"]),
+        &:not([data-name="youtube"]),
+        &:not([data-name="gallery"]),
+        &:not([data-name="blogpost"]),
+        &:not([data-widget-type="blogpost"]),
+        &:not([data-name="blogpostlist"]),
+        &:not([data-name="ecomproductslist"]),
+        &:not([data-name="ecomfeaturedproducts"]),
+        &:not([data-name="ecompr)oduct"]),
+        &:not([data-name="line"]),
+        &:not([data-name="image"]),
+        &:not([data-name="row"]) {
+            &:first-child {
+                margin-top: 2em;
+            }
+        }
+    }
+
+    // Add spacing to the top of a widget when it follows a row
+    #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]) {
+        margin-top: 20px;           // Widget margin bottom
+    }
+
+    // Readd widget spacing inside of rows
+    [data-name="row"] .column .widget + .widget {
+        margin-top: 12px;
+    }
+}

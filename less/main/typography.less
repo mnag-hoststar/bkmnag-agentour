@@ -36,6 +36,20 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+h1, h2, h3, h4, h5, h6, [class*="contentgroup__h"] {
+	.style--light & {
+	    color: @contrast--light;
+	}
+
+	.style--accent & {
+	    color: @contrast--accent;
+	}
+
+	.style--dark & {
+	    color: @contrast--dark;
+	}
+}
+
 // Break long words.
 h1, h2, h3, h4, h5, h6, p {
 	word-wrap: break-word;
@@ -46,7 +60,7 @@ p, a {
     hyphens: auto;
 }
 
-h1, .heading--1 {
+h1, .heading--1, .contentgroup__h1 {
 	font-family: @font__h1--font-family;
 	font-weight: @font__h1--font-weight;
 	font-size: @font__h1--font-size;
@@ -59,7 +73,7 @@ h1, .heading--1 {
 	.make-font-a-lot-smaller(@font__h1--font-size);
 }
 
-h2, .heading--2 {
+h2, .heading--2, .contentgroup__h2 {
 	font-family: @font__h2--font-family;
 	font-weight: @font__h2--font-weight;
 	font-size: @font__h2--font-size;
@@ -72,7 +86,7 @@ h2, .heading--2 {
 	.make-font-a-lot-smaller(@font__h2--font-size);
 }
 
-h3, .heading--3 {
+h3, .heading--3, .contentgroup__h3 {
 	font-family: @font__h3--font-family;
 	font-size: @font__h3--font-size;
 	font-weight: @font__h3--font-weight;
@@ -85,7 +99,7 @@ h3, .heading--3 {
 	.make-font-a-lot-smaller(@font__h3--font-size);
 }
 
-h4, .heading--4 {
+h4, .heading--4, .contentgroup__h4 {
 	font-family: @font__h4--font-family;
 	font-weight: @font__h4--font-weight;
 	font-size: @font__h4--font-size;
@@ -98,7 +112,7 @@ h4, .heading--4 {
 	.make-font-a-lot-smaller(@font__h4--font-size);
 }
 
-h5, .heading--5 {
+h5, .heading--5, .contentgroup__h5 {
 	font-family: @font__h4--font-family;
 	font-weight: @font__h4--font-weight;
 	font-size: @font__h4--font-size;
@@ -111,7 +125,7 @@ h5, .heading--5 {
 	.make-font-a-lot-smaller(@font__h4--font-size);
 }
 
-h6, .heading--6 {
+h6, .heading--6, .contentgroup__h6 {
 	padding-bottom: 0.2em;
 	font-family: @font__h4--font-family;
 	font-weight: @font__h4--font-weight;
@@ -125,12 +139,24 @@ h6, .heading--6 {
 	.make-font-a-lot-smaller(@font__h4--font-size, 0.7, 0.6);
 }
 
-p, .paragraph, ul, ol, li {
+p, .paragraph, ul, ol, li, .contentgroup__body {
 	// This is already defined in the html tag.
 	
 	.make-font-a-little-smaller(@font__p--font-size);
 	.make-font-smaller(@font__p--font-size);
 	.make-font-a-lot-smaller(@font__p--font-size);
+
+	.style--light & {
+	    color: fade(@contrast--light, 80%);
+	}
+
+	.style--accent & {
+	    color: fade(@contrast--accent, 80%);
+	}
+
+	.style--dark & {
+	    color: fade(@contrast--dark, 80%);
+	}
 }
 
 // ------------------------------
@@ -144,18 +170,42 @@ b, strong {
 u {
 	text-decoration: none;
 	border-bottom: 1px solid lighten(@color__p--text, 20%);
+
+	.style--light & {
+	    border-color: fade(@contrast--light, 65%);
+	}
+
+	.style--accent & {
+	    border-color: fade(@contrast--accent, 65%);
+	}
+
+	.style--dark & {
+	    border-color: fade(@contrast--dark, 65%);
+	}
 }
 
 // ------------------------------
 // #Label
 // ------------------------------
 
-label, .label-text {
+label:not(.clicktocall__label), .label-text, .file-name__label {
 	font-family: @font__h4--font-family;
 	font-size: 0.9em;
 	color: @color-text--faded;
 	word-wrap: normal;
     hyphens: none;
+
+    .style--light & {
+	    color: fade(@contrast--light, 75%)!important;
+	}
+
+	.style--accent & {
+	    color: fade(@contrast--accent, 75%)!important;
+	}
+
+	.style--dark & {
+	    color: fade(@contrast--dark, 75%)!important;
+	}
 }
 
 // ------------------------------
@@ -171,6 +221,28 @@ span {
 // ------------------------------
 
 a {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+
+	&, &:hover {
+        text-decoration: none;
+    }
+
+    .style--light & {
+        color: @color--accent;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
+}
+
+[data-name="content"] a {
 	display: inline;
 	color: @color-highlight;
 	line-height: 1.3em;
@@ -182,17 +254,41 @@ a {
 	height: auto;
 	.transition();
 
-    &, &:hover {
-        text-decoration: none;
+	.style--light & {
+		border-color: @color--accent;
     }
+
+    .style--accent & {
+    	border-color: @contrast--accent;
+    }
+
+    .style--dark & {
+    	border-color: @contrast--accent;
+    }
+
 	
 	&:hover {
 		background-color: @color-highlight--lighter;
 		border-bottom: 2px solid @color-highlight--light;
+
+		.style--light & {
+			border-color: @color--accent;
+	        color: @color--accent;
+	    }
+
+	    .style--accent & {
+	    	border-color: @contrast--accent;
+	        color: @contrast--accent;
+	    }
+
+	    .style--dark & {
+	    	border-color: @contrast--accent;
+	        color: @contrast--dark;
+	    }
 	}
 }
 
-a[class] {
+.widget[data-name="content"] a {
 	margin: 0;
 	padding: 0;
 	
@@ -202,12 +298,25 @@ a[class] {
     }
 }
 
+
 // ------------------------------
 // #Small
 // ------------------------------
 
 small {
 	color: @color__p--text;
+
+	.style--light & {
+	    color: fade(@contrast--light, 80%);
+	}
+
+	.style--accent & {
+	    color: fade(@contrast--accent, 80%);
+	}
+
+	.style--dark & {
+	    color: fade(@contrast--dark, 80%);
+	}
 }
 
 // ------------------------------
@@ -225,10 +334,34 @@ pre, code {
 	
 	.paragraph;
 	font-family: monospace;
+
+	.style--light & {
+	    background-color: darken(@color--light, 10%);
+	}
+
+	.style--accent & {
+	    background-color: lighten(@color--accent, 10%);
+	}
+
+	.style--dark & {
+	    background-color: lighten(@color--dark, 10%);
+	}
 }
 
 code {
 	border-left: 10px solid @color-highlight;
+
+	.style--light & {
+	    border-color: @color--accent
+	}
+
+	.style--accent & {
+	    border-color: @contrast--accent
+	}
+
+	.style--dark & {
+	    border-color: @color--accent;
+	}
 }
 
 // ------------------------------
@@ -249,7 +382,7 @@ ul {
 	}
 }
 
-ol {
+.bk-zone ol {
 	margin: 0.5em 0;
 	padding-left: 0;
 	counter-reset: ordered-counter;
@@ -349,8 +482,26 @@ blockquote {
 
 ::-moz-selection {
     background: @color-highlight--lighter;
+
+	.style--accent & {
+	    background: fade(@contrast--accent, 5%);
+	}
+
+	.style--dark &,
+	.style--background-image {
+	    background: fade(@contrast--light, 5%);
+	}
 }
 
 ::selection {
     background: @color-highlight--lighter;
+
+    .style--accent & {
+	    background: fade(@contrast--accent, 5%);
+	}
+
+	.style--dark &,
+	.style--background-image {
+	    background: fade(@contrast--light, 5%);
+	}
 }

@@ -52,6 +52,12 @@
 		margin: 0 auto;
 		margin-bottom: 2em;
 
+        .edit & {
+            @media only screen and (min-width: 1000px) {
+                width: 90%;
+            }
+        }
+
 		@media (max-width: 1024px) {
 			display: block;
 		}
@@ -277,6 +283,18 @@
 			display: block;
 			margin-bottom: 5px;
 			text-transform: uppercase;
+
+            .style--light & {
+                color: @contrast--light;
+            }
+
+            .style--accent & {
+                color: @contrast--accent;
+            }
+
+            .style--dark & {
+                color: @contrast--dark;
+            }
 		}
 
 		// Select Wrap
@@ -345,6 +363,18 @@
     -ms-flex-align: stretch;
     align-items: stretch;
     border-top: 1px solid fade(@color__p--text, 16%);
+
+    .style--light & {
+        border-top: 1px solid fade(@contrast--light, 16%);
+    }
+
+    .style--accent & {
+        border-top: 1px solid fade(@contrast--accent, 16%);
+    }
+
+    .style--dark & {
+        border-top: 1px solid fade(@contrast--dark, 16%);
+    }
 	
 	.responsivecolumns & {
 		border-left: 1px solid rgba(66,77,81,0.16);
@@ -386,6 +416,21 @@
 		width: 100%;
 		margin: 0;
 	}
+
+    .style--light & {
+        border-right: 1px solid fade(@contrast--light, 16%);
+        .box-shadow(inset 0px -1px 0px 0px fade(@contrast--light, 16%));
+    }
+
+    .style--accent & {
+        border-right: 1px solid fade(@contrast--accent, 16%);
+        .box-shadow(inset 0px -1px 0px 0px fade(@contrast--accent, 16%));
+    }
+
+    .style--dark & {
+        border-right: 1px solid fade(@contrast--dark, 16%);
+        .box-shadow(inset 0px -1px 0px 0px fade(@contrast--dark, 16%));
+    }
 	
 	.responsivecolumns & {
 		width: 100%/2;
@@ -410,6 +455,18 @@
 		.transition();
         &:hover {
 			.box-shadow(inset 0px 0px 0px 6px fade(@color__p--text, 16%));
+
+            .style--light & {
+                .box-shadow(inset 0px 0px 0px 6px fade(@contrast--light, 16%));
+            }
+
+            .style--accent & {
+                .box-shadow(inset 0px 0px 0px 6px fade(@contrast--accent, 16%));
+            }
+
+            .style--dark & {
+                .box-shadow(inset 0px 0px 0px 6px fade(@contrast--dark, 16%));
+            }
         }
     }
 }
@@ -471,6 +528,19 @@
 
     .title-link {
         color: @color__ecomproductslist-product-title--text;
+
+        .style--light & {
+            color: @contrast--light;
+        }
+    
+
+        .style--accent & {
+            color: @contrast--accent;
+        }
+
+        .style--dark & {
+            color: @contrast--dark;
+        }
     }
 }
 
@@ -494,6 +564,18 @@
 
     @media @tablet {
         padding:  20px;
+    }
+
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
     }
 	
 	// Column styles

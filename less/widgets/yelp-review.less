@@ -22,6 +22,18 @@
     	letter-spacing: 1px;
 		font-size: 0.7em;
 		color: fade(@color__p--text, 50%);
+
+		.style--light & {
+	        color: darken(@color--light, 20%);
+	    }
+
+	    .style--accent & {
+	        color: darken(@color--accent, 20%);
+	    }
+
+	    .style--dark & {
+	        color: darken(@color--accent, 20%);
+	    }
 	}
 	
 	&__review-author {

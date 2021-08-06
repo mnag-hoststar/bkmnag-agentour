@@ -42,6 +42,7 @@
 }
 
 .widget[data-name="content"], 
+.row:not(.row--width-no-padding) .widget[data-name="contentgroup"],
 .widget[data-name="pagetitle"],
 .widget[data-widget-type="pagetitle"],
 .widget[data-name="responsivecolumns"],
@@ -52,6 +53,7 @@
 .widget[data-name="tweet"],
 .widget[data-name="clicktocall"],
 .widget[data-name="dropbox"],
+.widget[data-name="filedownload"],
 .widget[data-name="facebooklike"],
 .widget[data-name="paypalbuynow"],
 .widget[data-name="socialicons"],
@@ -81,6 +83,14 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    [data-name="row"] .row__container > & {
+        margin-bottom: 16px;
+    }
+
+    [data-name="row"] & {
+        width: 100%;
+    }
 }
 
 // Responsive Column Widgets
@@ -99,6 +109,11 @@
         @media @mobile {
             margin-bottom: 20px;
         }
+    }
+
+    .row--width-no-padding & {
+        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -131,10 +146,12 @@
 .widget[data-name="ecomfeaturedproducts"],
 .widget[data-name="ecomproduct"],
 .widget[data-name="line"],
-.widget[data-name="image"] {
-    margin-top: 0!important; // Ensures correct spacing for default pages
+.widget[data-name="image"],
+.widget[data-name="row"] {
+    margin-top: 0; // Ensures correct spacing for default pages
     margin-left: 0;
     margin-right: 0;
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -146,10 +163,6 @@
 // #Line Widget
 // -----------------------------
 
-.widget[data-name="line"] {
-	
-}
-
 .line {
     line-height: 0;
 }
@@ -157,6 +170,18 @@
 hr.line__rule {
 	height: 3px;
 	background-color: fade(@color__p--text, 60%);
+
+    .style--light & {
+        background-color: darken(@color--light, 12%);
+    }
+
+    .style--accent & {
+        background-color: darken(@color--accent, 12%);
+    }
+
+    .style--dark & {
+        background-color: darken(@color--accent, 12%);
+    }
 }
 
 // -----------------------------

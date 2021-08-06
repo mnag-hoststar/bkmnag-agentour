@@ -26,6 +26,18 @@
 .widget[data-name="image"] {
 	.image-widget-background--spacing();
 	background: @color__image--background;
+
+	.style--light & {
+        background-color: @color--light;
+    }
+
+    .style--accent & {
+        background-color: @color--accent;
+    }
+
+    .style--dark & {
+        background-color: @color--dark;
+    }
 }
 
 // ------------------------------
@@ -64,4 +76,20 @@
 
 .image-description {
 	color: @color__image-description--text;
+}
+
+.imagewidget__image-title,
+.imagewidget__image-description {
+
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
 }

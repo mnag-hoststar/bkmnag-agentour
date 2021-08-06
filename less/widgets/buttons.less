@@ -20,7 +20,8 @@
 .link-button,
 .tweet .button,
 .clicktocall .phone-number-link,
-a.ecomproduct__button {
+a.ecomproduct__button,
+.contentgroup__link {
     cursor: pointer;
     position: relative;
     display: inline-block;
@@ -41,12 +42,42 @@ a.ecomproduct__button {
 	.make-font-a-little-smaller(@font__button--font-size);
 	.make-font-smaller(@font__button--font-size);
 	.make-font-a-lot-smaller(@font__button--font-size);
+
+	.style--light & {
+        border-color: @contrast--light;
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+        border-color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+        border-color: @contrast--dark;
+    }
 	
     &:hover {
 		border: 2px solid @color__button--background--hover;
         background-color: transparent;
     	color: @color__button--text--hover;
     	.transition (all, 0.5s, ease);
+
+    	.style--light & {
+    		border-color: @color--accent;
+            color: @color--accent;
+        }
+
+        .style--accent & {
+        	border-color: fade(@contrast--accent, 85%);
+            color: fade(@contrast--accent, 85%);
+        }
+
+        .style--dark & {
+        	border-color: fade(@contrast--dark, 85%);
+            color: fade(@contrast--dark, 85%);
+        }
     }
 	
 	// Focus style for easier keyboard navigation
@@ -82,17 +113,6 @@ a.ecomproduct__button {
 	}
 }
 
-.link-button,
-.tweet .button,
-.clicktocall .phone-number-link {
-    display: table-cell;
-    vertical-align: middle;
-	
-	 &:hover {
-	}
-	&:active {
-	}
-}
 
 // -----------------------------
 // #Tweet Button
@@ -109,16 +129,6 @@ a.ecomproduct__button {
 // -----------------------------
 // #Dropbox
 // -----------------------------
-
-.dropbox {
-	display: table;
-}
-
-.dropbox__button,
-.dropbox__label {
-	display: table-cell;
-	vertical-align: middle;
-}
 
 .dropbox__label {
 	width: 100%;
@@ -164,11 +174,41 @@ a.ecomproduct__button {
 	.transition (all, 0.5s, ease);
 	.border-radius(4px);
 
+	.style--light & {
+        border-color: @contrast--light!important;
+        color: @contrast--light!important;
+    }
+
+    .style--accent & {
+        color: @contrast--accent!important;
+        border-color: @contrast--accent!important;
+    }
+
+    .style--dark & {
+        color: @contrast--dark!important;
+        border-color: @contrast--dark!important;
+    }
+
 	&:hover {
 		text-decoration: none;
 		border: 2px solid @color__button--background--hover !important;
 		color: @color__button--text--hover !important;
 		.transition (all, 0.5s, ease);
+
+		.style--light & {
+            border-color: @color--accent!important;
+            color: @color--accent!important;
+        }
+
+        .style--accent & {
+            border-color: fade(@contrast--accent, 85%)!important;
+            color: fade(@contrast--accent, 85%)!important;
+        }
+
+        .style--dark & {
+            border-color: fade(@contrast--dark, 85%)!important;
+            color: fade(@contrast--dark, 85%)!important;
+        }
 	}
 
 	// Icon
