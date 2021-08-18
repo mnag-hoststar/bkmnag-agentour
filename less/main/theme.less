@@ -29,10 +29,6 @@
 	.header-border-removal();
 }
 
-.template__header div {
-}
-
-
 // ------------------------------
 // #Site Styles
 // ------------------------------
@@ -51,7 +47,6 @@ html, body {
     background-color: @color__body--background;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 	font-smooth: always;
-	font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
@@ -64,7 +59,6 @@ html, body {
 	// iOS fix of VH unit
     width: -webkit-calc(100% - 0px);
 }
-
 
 // Site Container
 .site-container {
@@ -88,12 +82,6 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 }
 
 // ------------------------------
-// #Page Styles
-// ------------------------------
-
-.page {}
-
-// ------------------------------
 // #Content
 // ------------------------------
 
@@ -106,7 +94,6 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 // Container
 
 .container {
-
 	@media @mobile {
 		display: block;
 	}
@@ -122,10 +109,10 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     text-align: center;
     border-top: 10px solid @color__footer--border;
     padding: 2em 0;
-	.footer-border-removal()
-	.container {
-	}
+	.footer-border-removal();
+
 	// Widget
+
 	.widget {
 		width: 80%;
 		max-width: @layout-width-desktop;
