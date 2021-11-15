@@ -1,20 +1,7 @@
-// ----------------------------------------
-// Agentour: LESS > Plugins > Blog > Blog Posts List
-// ----------------------------------------
-//
-// #Conditional Mixins
-// #All posts
-// #Single Article
-// #Image
-// #Content
-// #Footer
-// #Paginatinon
-//
-// ----------------------------------------
+// Agentour: Blog Posts List
 
-// ------------------------------
-// #Conditional Mixins
-// ------------------------------
+
+// Conditional Mixins
 
 // Conditional if the Blog Post List background 
 // is not the same as the Blog Article background.
@@ -30,9 +17,7 @@
 	padding: 1em 0;
 }
 
-// ------------------------------
-// #All posts
-// ------------------------------
+// All posts
 
 .widget[data-name="blogpostlist"] {
 	background-color: @color__blogpostlist--background;
@@ -60,9 +45,7 @@
 	.item--margin-size--border();
 }
 
-// ------------------------------
-// #Single Article
-// ------------------------------
+// Single Article
 
 .blogpostlist__post-article {
 	position: relative;
@@ -88,9 +71,7 @@
 	}
 }
 
-// ------------------------------
-// #Image
-// ------------------------------
+// Image
 
 .blogpostlist {
     &__post-image {
@@ -125,9 +106,7 @@
     }
 }
 
-// ------------------------------
-// #Content
-// ------------------------------
+// Content
 
 .blogpostlist__post-content {
 	margin: 0;
@@ -197,9 +176,7 @@ a.blogpostlist__read-more {
 	}
 }
 
-// ------------------------------
-// #Footer
-// ------------------------------
+// Footer
 
 .blogpostlist__post-footer {
 	position: absolute;
@@ -247,8 +224,6 @@ a.blogpostlist__read-more {
 	}
 }
 
-// ------------------------------
-// #Paginatinon
-// ------------------------------
+// Paginatinon
 
 // For pagination, see less/plugins/plugins.less.

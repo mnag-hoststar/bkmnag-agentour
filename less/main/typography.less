@@ -1,25 +1,6 @@
-// ----------------------------------------
-// Agentour: LESS > Main > Typography
-// ----------------------------------------
-//
-// #Content Widget
-// #General Typography
-// #Bold, Italic, Underlined
-// #Label
-// #Span
-// #Link
-// #Small
-// #Pre
-// #Code
-// #Unordered and Ordered List
-// #Block Quote
-// #Highlighted Text
-//
-// ----------------------------------------
+// Agentour: Typography
 
-// ------------------------------
-// #General Typography
-// ------------------------------
+// General Typography
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
@@ -48,7 +29,7 @@ h1, h2, h3, h4, h5, h6, [class*="contentgroup__h"] {
 
 // Break long words.
 h1, h2, h3, h4, h5, h6, p {
-	word-wrap: break-word;
+	word-break: break-word;
 }
 
 p, a {
@@ -155,9 +136,7 @@ p, .paragraph, ul, ol, li, .contentgroup__body {
 	}
 }
 
-// ------------------------------
-// #Bold, Italic, Underlined
-// ------------------------------
+// Bold, Italic, Underlined
 
 b, strong {
 	font-weight: 900;
@@ -180,9 +159,7 @@ u {
 	}
 }
 
-// ------------------------------
-// #Label
-// ------------------------------
+// Label
 
 label:not(.clicktocall__label), .label-text, .file-name__label {
 	font-family: @font__h4--font-family;
@@ -204,17 +181,13 @@ label:not(.clicktocall__label), .label-text, .file-name__label {
 	}
 }
 
-// ------------------------------
-// #Span
-// ------------------------------
+// Span
 
 span {
 	background-color: transparent;
 }
 
-// ------------------------------
-// #Link
-// ------------------------------
+// Link
 
 a {
 	margin-top: 0;
@@ -295,9 +268,7 @@ a {
 }
 
 
-// ------------------------------
-// #Small
-// ------------------------------
+// Small
 
 small {
 	color: @color__p--text;
@@ -315,9 +286,7 @@ small {
 	}
 }
 
-// ------------------------------
-// #Preformatted Text and Code
-// ------------------------------
+// Preformatted Text and Code
 
 pre, code {
 	display: block;
@@ -360,9 +329,7 @@ code {
 	}
 }
 
-// ------------------------------
-// #Unordered and Ordered List
-// ------------------------------
+// Unordered and Ordered List
 
 ul {
 	margin: 0.5em 0 0.5em 1.2em;
@@ -409,9 +376,7 @@ ul {
 	}
 }
 
-// ------------------------------
-// #Block Quote
-// ------------------------------
+// Block Quote
 
 blockquote {
 	position: relative;
@@ -472,9 +437,7 @@ blockquote {
 	}
 }
 
-// ------------------------------
-// #Highlighted Text
-// ------------------------------
+// Highlighted Text
 
 ::-moz-selection {
     background: @color-highlight--lighter;

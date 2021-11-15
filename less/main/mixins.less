@@ -1,19 +1,7 @@
-// ----------------------------------------
-// Agentour: LESS > Main > Mixins
-// ----------------------------------------
-//
-// #Global Mixins
-// #Animation
-// #Layout Mixins
-// #Font Mixins
-// #Theme Mixins
-// #Flexbox LESS mixins
-//
-// ----------------------------------------
 
-// ------------------------------
-// #Global Mixins
-// ------------------------------
+// Agentour: Mixins
+
+// Global Mixins
 
 .box-sizing(@attribute) {
 	-webkit-box-sizing: @attribute;
@@ -84,9 +72,7 @@
 	}
 }
 
-// ------------------------------
-// #Animation
-// ------------------------------
+// Animation
 
 .transition(@property: all, @duration: 0.15s, @ease: ease-in-out, @delay: 0s) {
 	-webkit-transition: @property @duration @ease @delay;
@@ -181,9 +167,7 @@
 	perspective: @attribute;
 }
 
-// ------------------------------
-// #Font Mixins
-// ------------------------------
+// Font Mixins
 
 // These two mixins only make the font smaller when its
 // over a certain size. Otherwise it will be too small
@@ -210,9 +194,7 @@
 	}
 }
 
-// ------------------------------
-// #Theme Mixins
-// ------------------------------
+// Theme Mixins
 
 // Template content width.
 
@@ -293,10 +275,8 @@
 
 
 
-// ------------------------------
-// #Flexbox LESS mixins
+// Flexbox LESS mixins
 // The spec: http://www.w3.org/TR/css3-flexbox
-// ------------------------------
 
 // Flexbox display
 // flex or inline-flex
