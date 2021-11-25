@@ -48,19 +48,20 @@
     position: relative;
     .display-flex(flex);
     .align-items(center, center);
-
-    height: 800px;
-    padding: 30px;
+    min-height: 800px;
+    padding: 60px 30px;
     z-index: 1;
 
     @media @tablet-horizontal {
-        height: 800px;
+        min-height: 800px;
     }
+
     @media @tablet {
-        height: 700px;
+        min-height: 700px;
     }
+
     @media @mobile {
-        height: auto;
+        min-height: none;
     }
 
 }
