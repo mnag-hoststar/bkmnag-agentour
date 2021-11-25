@@ -10,6 +10,20 @@
 	}
 }
 
+.product-filters .fieldset--filters,
+.product-filters .fieldset--search {
+    @media @tablet {
+        padding: 10px 0;
+        width: 80%;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    @media @mobile {
+        width: 90%;
+    }
+}
+
 // Product Filters
 
 .product-filters {
@@ -58,21 +72,6 @@
 // Product Search
 
 .product-filters .fieldset--search {
-	@media (max-width: 1024px) {
-		width: 100%;
-	}
-
-	@media (max-width: 1024px) {
-		padding: 20px 40px 10px;
-	}
-
-	@media @tablet {
-		padding: 14px 20px;
-	}
-	
-	.responsivecolumns & {
-		float: none;
-	}
 	
 	// Label
 	
@@ -112,22 +111,11 @@
         @media @mobile, @tablet-horizontal {
             display: block;
         }
-    }
 
-    // First Form Group
-
-    .form-group:first-of-type {
-        -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
-        padding-right: 0.5em;
-    }
-
-    // Last Form Group
-
-    .form-group:last-of-type {
-        margin: 0;
-
+        &:first-child {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
     }
 
     // Clear Search Group Selector :) Ugly, I know
@@ -152,10 +140,10 @@
     .button--submit {
         @media @tablet-horizontal {
             width: 50px;
-            text-indent: -9999px;
             display: block;
             position: relative;
             padding: 0;
+            font-size: 0;
 
             &:after {
                 content: '\f002';
@@ -179,13 +167,6 @@
 // Dropdowns
 
 .product-filters .fieldset--filters {
-    @media (max-width: 1024px) {
-        width: 100%;
-        padding: 10px 40px;
-    }
-    @media @tablet {
-        padding: 10px 20px;
-    }
 	
 	// Form Body
 	
@@ -208,36 +189,32 @@
 		-webkit-align-items: flex-end;
 		-ms-flex-align: end;
 		align-items: flex-end;
+        margin: 0 -5px;
 
-		@media @tablet {
-			// Hack for Mobile IE, needs fixed width
-			width: 100px;
-			min-width: 100%;
+		@media @mobile {
+            margin: 0;
+		}
+
+		.responsivecolumns & {
+            margin: 0;
 		}
 	}
 	
 	// Form Group
 	
 	.form-group {
-		min-width: 15%;
-		width: auto;
-		-webkit-flex: 1 1 auto;
-		-ms-flex: 1 1 auto;
-		flex: 1 1 auto;
-		margin-right: 5%;
-		margin-bottom: 0;
-
-		&:last-of-type {
-			margin-right: 0;
-		}
-
+        margin: 0 5px;
+        flex-grow: 1;
 
 		@media @mobile {
 			width: 100%;
-			margin-bottom: 8px;
-			margin-right: 0;
+			margin: 8px 0;
 		}
 
+		.responsivecolumns & {
+			width: 100%;
+			margin: 8px 0;
+		}
 
 		// Label
 
@@ -382,6 +359,11 @@
 		width: 100%;
 		margin: 0;
 	}
+    
+    .responsivecolumns & {
+        width: 100%;
+        margin: 0;
+    }
 
     .style--light & {
         border-right: 1px solid fade(@contrast--light, 16%);
@@ -397,11 +379,6 @@
         border-right: 1px solid fade(@contrast--dark, 16%);
         .box-shadow(inset 0px -1px 0px 0px fade(@contrast--dark, 16%));
     }
-	
-	.responsivecolumns & {
-		width: 100%/2;
-		margin: 0;
-	}
 	
 	.columns-three-left &,
 	.columns-three-right &,
