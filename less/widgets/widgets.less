@@ -1,15 +1,6 @@
-// Agentour: LESS > Widgets > Widgets
-//
-// Global Widget Styles
-// Columns
-// Page Title Widget
-// Line Widget
-//
+// WIDGETS
 
-
-// -----------------------------
 // Standard Widgets
-// -----------------------------
 
 .main-content .widget {
     margin: 0 @value__widget--spacing--desktop @value__widget--spacing--desktop;
@@ -85,9 +76,8 @@
 }
 
 // Responsive Column Widgets
-.widget[data-name="responsivecolumns"] {
 
-    // Widget
+.widget[data-name="responsivecolumns"] {
     .widget {
         width: 100%;
         @media @mobile {
@@ -108,7 +98,6 @@
     }
 }
 
-// Column
 .column {
     @media @mobile {
         margin-bottom: 30px;
@@ -119,10 +108,7 @@
     }
 }
 
-// -----------------------------
 // Full Width Widgets
-// -----------------------------
-
 
 .widget[data-name="responsiveslideshow"],
 .widget[data-widget-type="responsiveslideshow"],
@@ -139,7 +125,7 @@
 .widget[data-name="line"],
 .widget[data-name="image"],
 .widget[data-name="row"] {
-    margin-top: 0; // Ensures correct spacing for default pages
+    margin-top: 0;
     margin-left: 0;
     margin-right: 0;
 
@@ -148,11 +134,7 @@
     }
 }
 
-
-
-// -----------------------------
 // Line Widget
-// -----------------------------
 
 .line {
     line-height: 0;
@@ -175,9 +157,7 @@ hr.line__rule {
     }
 }
 
-// -----------------------------
 // Page Title Widget
-// -----------------------------
 
 .pagetitle-text {
     h1;

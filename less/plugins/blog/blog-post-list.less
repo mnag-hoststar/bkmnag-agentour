@@ -1,17 +1,10 @@
-// Agentour: Blog Posts List
-
+// BLOG POST LIST
 
 // Conditional Mixins
-
-// Conditional if the Blog Post List background 
-// is not the same as the Blog Article background.
 
 .blogpostlist-article-background--spacing() when not (@color__blogpostlist--background = @color__blogpostlist-article--background) {
 	padding: 2em 0;
 }
-
-// Conditional if the Blog Post List background 
-// is the same as the page background.
 
 .blogpostlist-widget-background--spacing() when (@color__blogpostlist--background = @color__body--background) {
 	padding: 1em 0;

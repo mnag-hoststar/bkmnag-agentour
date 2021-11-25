@@ -1,24 +1,10 @@
-// Agentour: LESS > Widgets > Twitter Feed
-//
-// Conditional Mixins
-// Tweet Item
-// Avatar
-// Account Link
-// Content
-// Tweet Metadata
-//
+// TWITTER FEED
 
 // Conditional Mixins
-
-// Conditional if the container background 
-// is not the same as the page background.
 
 .twitter-body-background--spacing() when not (@color__twitter--background = @color__body--background) {
 	padding: 2em 0;
 }
-
-// Conditionals if the container background 
-// is the same as the item background.
 
 .twitter-widget-background--spacing() when (@color__twitter--background = @color__twitter-item--background) {
 	padding: 1em 0;

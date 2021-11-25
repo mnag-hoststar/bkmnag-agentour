@@ -1,16 +1,6 @@
-// Agentour: LESS > Widgets > Gallery
-//
-// Conditional Mixins
-// Whole Gallery
-// Single Gallery Item
-// Image
-// Caption
-//
+// GALLERY
 
 // Conditional Mixins
-
-// Conditional if the gallery background 
-// is not the same as the page background.
 
 .gallery-widget-background--spacing() when not (@color__gallery--background = @color__body--background) {
 	padding: 2em 0;
@@ -19,7 +9,6 @@
 // Whole Gallery
 
 .widget[data-name="gallery"] {
-	//.gallery-widget-background--spacing();
 	background: @color__gallery--background;
 }
 

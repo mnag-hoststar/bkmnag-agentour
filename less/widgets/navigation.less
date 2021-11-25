@@ -1,12 +1,4 @@
-// Agentour: LESS > Widgets > Navigation
-//
-// Logo & Company Name
-// Navigation
-// Navigation Toggle Button
-// Navigation Body
-// Navigation List
-// Navigation Items
-//
+// NAVIGATION
 
 // Logo & Company Name
 
@@ -88,9 +80,6 @@ html.nav-open {
 }
 
 // Navigation Toggle Button
-
-// Navigation Toggle Button
-// It only appears on tablet and mobile sizes.
 
 .navigation-toggle {
 	display: none;
@@ -228,8 +217,6 @@ html.nav-open {
 
 // Navigation Body
 
-// Dark overlay on tablet and mobile.
-
 .navigation-body {
 	.transition(opacity, 0s);
 	
@@ -258,7 +245,6 @@ html.nav-open {
 	}
 }
 
-
 // Navigation List
 
 .navigation-list {
@@ -274,8 +260,6 @@ html.nav-open {
 }
 
 // Navigation Items
-
-// Navigation Normal Item
 
 .navigation-item {
 	margin-bottom: 0;
@@ -299,15 +283,12 @@ html.nav-open {
 		color: @color__navigation--text;
 		border-bottom: 2px solid transparent;
 		.transition (all, 0.5s, ease);
+		
 		@media @tablet {
 			padding: 0.5em 0;
 			font-size: @font__navigation--font-size * 1.2;
 			line-height: @font__navigation--line-height * 1.2;
 		}
-	
-		//.make-font-a-little-smaller(@font__navigation--font-size);
-		//.make-font-smaller(@font__navigation--font-size);
-		//.make-font-a-lot-smaller(@font__navigation--font-size);
 		
 		&:hover {
 			color: @color__navigation--text--hover;
@@ -340,9 +321,6 @@ html.nav-open {
 // Navigation Folder Item
 
 .navigation-item.folder {
-	
-	// Folder Icon
-	
 	> .item-name {
 		&:after {
 			right: 0.5em;
@@ -420,9 +398,6 @@ html.nav-open {
 		color: @color__navigation--text;
 		line-height: 1.5em;
 		border-bottom: 0;
-
-		@media @tablet {
-		}
 		
 		&:hover {
 			color: @color__navigation--text--hover;

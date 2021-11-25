@@ -1,25 +1,6 @@
-// Agentour: LESS > Widgets > Forms
-//
-// Conditional Mixins
-// Form Background
-// Legend
-// Form
-// Label
-// Text Inputs
-// Placeholders
-// Dropdowns
-// Radio Buttons and Checkboxes
-// Error Messages
-// 
-// Sign Up Form
-// Contact Form
-// Advanced Contact Form
-//
+// FORMS
 
 // Conditional Mixins
-
-// Conditional if the form background 
-// is not the same as the page background.
 
 .form-widget-background--spacing() when not (@color__form--background = @color__body--background) {
 	padding: 2em 0;
@@ -57,7 +38,6 @@
 // Legend
 
 .form .legend {
-	//display: none;
 	margin-bottom: 1em;
 	color: @color__form-legend--text;
 	background-color: transparent;
@@ -107,8 +87,6 @@ select {
 	height: 45px;
 	font-size: @font__p--font-size * 0.9;
 }
-
-// Text Inputs
 
 // All Input Fields
 
@@ -208,7 +186,7 @@ textarea {
     }
 }
 
-:-moz-placeholder { /* Firefox 18- */
+:-moz-placeholder {
    color: @color-text--light;
 
    .style--light & {
@@ -224,7 +202,7 @@ textarea {
     }
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+::-moz-placeholder {
    color: @color-text--light;
 
    .style--light & {
@@ -255,7 +233,6 @@ textarea {
         color: @contrast--dark;
     }
 }
-
 
 input:focus {
     &::-webkit-input-placeholder {
@@ -482,8 +459,6 @@ input:focus {
 		margin-top: 2em;
 	}
 }
-
-// Dropdowns
 
 // Select Wrap
 
