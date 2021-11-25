@@ -617,22 +617,14 @@ input:focus {
 
 .signupform {
 	.form-body {
-		display: table;
-		width: 100%;
+		display: flex;
+        flex-wrap: wrap;
 	}
 
 	.form-group {
-		display: table-cell;
-		vertical-align: middle;
-		height: 3em;
-		
 		&:first-child {
-			width: 100%;
+            flex-grow: 1;
 			padding-right: 0.5em;
-		}
-		
-		.button {
-			white-space: nowrap;
 		}
 	}
 
