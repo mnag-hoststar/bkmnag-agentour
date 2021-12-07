@@ -70,22 +70,26 @@
 
 // Image
 
-.blogpostlist {
-    &__post-image {
-        position: relative;
-        overflow: hidden;
-        height: 0;
-		padding-bottom: 56.25%;
-		
-		@media @mobile {
-			float: left;
-			height: 100%;
-			width: 25%;
-    		padding-bottom: 0;
-		}
+.blogpostlist__post-image {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 56.25%;
+    
+    @media @mobile {
+        float: left;
+        height: 100%;
+        width: 25%;
+        padding-bottom: 0;
     }
+}
+
+// Using the background image instead.
+
+.blogpostlist__image {
+    display: none;
 	
-    &__image-link {
+    &-link {
         background-position: center center;
         background-size: cover;
         position: absolute;
@@ -93,13 +97,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-		.transition(all, 0.3s);
-    }
-
-    // Using the background image instead.
-
-    &__image {
-        display: none;
+        .transition(all, 0.3s);
     }
 }
 
@@ -173,14 +171,6 @@ a.blogpostlist__read-more {
 	a;
 }
 
-// This style only activates if the article has an image.
-
-.blogpostlist__post-image ~ .blogpostlist__post-content {
-	@media @mobile {
-		width: 75%;
-	}
-}
-
 // Footer
 
 .blogpostlist__post-footer {
@@ -234,15 +224,21 @@ a.blogpostlist__read-more {
 	}
 }
 
-// This style only activates if the article has an image.
+.blogpostlist__post-image {
+    ~ .blogpostlist__post-content {
+        @media @mobile {
+            width: 75%;
+        }
+    }
 
-.blogpostlist__post-image ~ .blogpostlist__post-footer {
-	margin-top: 56.25%;
-	
-	@media @mobile {
-		left: 25%;
-		margin-top: 0;
-	}
+    ~ .blogpostlist__post-footer {
+        margin-top: 56.25%;
+        
+        @media @mobile {
+            left: 25%;
+            margin-top: 0;
+        }
+    }
 }
 
 // Paginatinon

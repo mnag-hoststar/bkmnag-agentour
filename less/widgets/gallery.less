@@ -70,6 +70,18 @@ a.gallery__image-link {
 
 .gallery__image {
 	display: none;
+
+	// Image Title
+	
+	&-title {
+		margin-bottom: 0.5em;
+		color: @color__gallery-title--text;
+	}
+	
+	&-description {
+		color: @color__gallery-description--text;
+		line-height: 1.3em;
+	}
 }
 
 // Caption
@@ -99,16 +111,4 @@ a.caption-link {
 	.make-font-a-little-smaller(@font__p--font-size);
 	.make-font-smaller(@font__p--font-size);
 	.make-font-a-lot-smaller(@font__p--font-size);
-}
-
-// Image Title
-
-.gallery__image-title {
-	margin-bottom: 0.5em;
-	color: @color__gallery-title--text;
-}
-
-.gallery__image-description {
-	color: @color__gallery-description--text;
-	line-height: 1.3em;
 }

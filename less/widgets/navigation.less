@@ -169,7 +169,7 @@ html.nav-open {
 		}
 	}
 		
-	@media only screen and (max-width: 420px) {
+	@media @mobile-small {
 		right: 0;
 	}
 
@@ -220,15 +220,11 @@ html.nav-open {
 .navigation-body {
 	.transition(opacity, 0s);
 	
-	// This is only shown in Tablet and Mobile
-	
 	@media @tablet {
 		outline: 0;
 		height: 0;
 		width: 0;
 		opacity: 0;
-		
-		// When Navigation is open
 
 		.open & {
 			display: block;
@@ -316,34 +312,33 @@ html.nav-open {
 	&.selected:active > .item-name {
 		.box-shadow(none);
 	}
-}
 
-// Navigation Folder Item
-
-.navigation-item.folder {
-	> .item-name {
-		&:after {
-			right: 0.5em;
-			margin-left: 0.3em;
-			width: 1em;
-    		height: 1em;
-			line-height: 1em;
-			font-size: 1.2em;
-			content: "\f107";
-			font-family: 'FontAwesome', sans-serif;
-			text-align: right;
-		}
-	}
+	// Navigation Folder Item
 	
-	&.folder-open > .item-name {
-		color: darken(@color__navigation--text, 20%);
+	&.folder {
+		> .item-name {
+			&:after {
+				right: 0.5em;
+				margin-left: 0.3em;
+				width: 1em;
+				height: 1em;
+				line-height: 1em;
+				font-size: 1.2em;
+				content: "\f107";
+				font-family: 'FontAwesome', sans-serif;
+				text-align: right;
+			}
+		}
+		
+		&-open > .item-name {
+			color: darken(@color__navigation--text, 20%);
+		}
 	}
 }
 
 // Navigation Folder Submenu
 
 .navigation-list--children {
-	
 	.navigation-item.folder &,
 	.navigation-item.folder:hover &,
 	.navigation-item.folder:active & {

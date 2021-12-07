@@ -33,43 +33,43 @@
 	@media @tablet-horizontal {
 		max-width: 100%;
 	}
-}
 
-// Legend
-
-.form .legend {
-	margin-bottom: 1em;
-	color: @color__form-legend--text;
-	background-color: transparent;
-
-    .style--light & {
-        color: @contrast--light;
+    // Legend
+    
+    .legend {
+        margin-bottom: 1em;
+        color: @color__form-legend--text;
+        background-color: transparent;
+    
+        .style--light & {
+            color: @contrast--light;
+        }
+    
+        .style--accent & {
+            color: @contrast--accent;
+        }
+    
+        .style--dark & {
+            color: @contrast--dark;
+        }
     }
-
-    .style--accent & {
-        color: @contrast--accent;
+    
+    // Form
+    
+    .form-group {
+        margin-bottom: 1em;
+    
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
-
-    .style--dark & {
-        color: @contrast--dark;
+    
+    // Label
+    
+    label {
+        margin: 0 0 0.3em;
+        line-height: 1.5em;
     }
-}
-
-// Form
-
-.form .form-group {
-	margin-bottom: 1em;
-
-	&:last-of-type {
-		margin-bottom: 0;
-	}
-}
-
-// Label
-
-.form label {
-	margin: 0 0 0.3em;
-	line-height: 1.5em;
 }
 
 label {
@@ -589,10 +589,10 @@ input:focus {
             border-color: fade(@contrast--dark, 95%);
         }
 	}
-}
 
-.select::-ms-expand {
-    display: none;
+    &::-ms-expand {
+        display: none;
+    }
 }
 
 // Error Messages

@@ -64,12 +64,12 @@
 
 .blogpost__post-footer {
 	position: relative;
-}
 
-// Post Timestamp
-
-.blogpost__post-footer .timestamp {
-	font-size: @font__p--font-size * 0.8;
+	// Post Timestamp
+	
+	.timestamp {
+		font-size: @font__p--font-size * 0.8;
+	}
 }
 
 // Post Attributes
@@ -108,13 +108,15 @@
 
 // Post Category and Tags
 
-.post-category, .post-tags {
+.post-category,
+.post-tags {
 	@media @mobile {
     	display: block;
 	}
 }
 
-.category-title, .tags-title {
+.category-title,
+.tags-title {
 	display: inline-block;
 	vertical-align: middle;
 }
