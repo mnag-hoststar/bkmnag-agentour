@@ -1,5 +1,25 @@
 // EMBEDS
 
+// Code
+
+.widget[data-name="embed"] {
+	width: 80%;
+	max-width: @layout-width-desktop;
+	margin: 0 auto;
+	
+    @media @mobile {
+        width: 90%;
+	}
+}
+
+.widget.embed .embed-default,
+.widget .embed .embed-wrap {
+	padding: 0;
+	background: transparent;
+	border: none;
+	text-align: left;
+}
+
 // Google Maps
 
 .widget[data-name="map"] .map {
