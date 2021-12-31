@@ -10,20 +10,6 @@
 	}
 }
 
-.product-filters .fieldset--filters,
-.product-filters .fieldset--search {
-    @media @tablet {
-        padding: 10px 0;
-        width: 80%;
-        margin: 0 auto;
-        max-width: 800px;
-    }
-
-    @media @mobile {
-        width: 90%;
-    }
-}
-
 // Product Filters
 
 .product-filters {
@@ -36,6 +22,17 @@
 	
 	.fieldset--search, 
 	.fieldset--filters {
+        @media @tablet {
+            padding: 10px 0;
+            width: 80%;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+    
+        @media @mobile {
+            width: 90%;
+        }
+
 		.responsivecolumns & {
 			background-color: transparent;
 			padding: 0;
