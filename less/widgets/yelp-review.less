@@ -3,6 +3,9 @@
 .yelpreview {
 	&__review-item {
 		position: relative;
+		list-style: none;
+		padding: 0;
+		margin: 1em 0 3em;
 	}
 	
 	&__review-header {
@@ -43,12 +46,6 @@
 		margin: 0;
 	}
 
-	&__review-item {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
 	&__review-excerpt {
 		margin-bottom: 1em;
 		
@@ -68,11 +65,5 @@
 	
 	&__timestamp {
 		.timestamp-styles;
-		background-color: @color-text--lightest;
-		font-size: @font__p--font-size;
-
-		.make-font-a-little-smaller(@font__p--font-size);
-		.make-font-smaller(@font__p--font-size);
-		.make-font-a-lot-smaller(@font__p--font-size);
 	}
 }

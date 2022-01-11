@@ -1,21 +1,21 @@
 // BLOG POST LIST
 
-// Conditional Mixins
+// All posts
 
-.blogpostlist-article-background--spacing() when not (@color__blogpostlist--background = @color__blogpostlist-article--background) {
-	padding: 2em 0;
-}
+#page-zones__main-widgets__blogpostlist {
+    margin: 2em auto 1em;
 
-.blogpostlist-widget-background--spacing() when (@color__blogpostlist--background = @color__body--background) {
-	padding: 1em 0;
+    @media @mobile {
+        max-width: 90%;
+    }
 }
 
 // All posts
 
 .widget[data-name="blogpostlist"] {
-	background-color: @color__blogpostlist--background;
 	.blogpostlist-article-background--spacing();
 	.blogpostlist-widget-background--spacing();
+    margin-top: 2em;
 
     .style--light & {
         background-color: transparent;
@@ -43,7 +43,6 @@
 .blogpostlist__post-article {
 	position: relative;
 	.item--margin-size--3to1-cols();
-	background-color: @color__blogpostlist-article--background;
 	.clearfix();
 
     .style--light & {
@@ -64,7 +63,8 @@
 	}
 
     .responsivecolumns & {
-        width: 100%;
+		.display-flex(flex);
+		.flex-direction(inherit);
     }
 }
 
@@ -114,8 +114,9 @@
 
 .blogpostlist__post-content {
 	margin: 0;
-	padding: 4em 1.5em 1.5em;
+	padding: 2.5em 1.5em 1.5em;
 	font-size: @font__p--font-size;
+    line-height: @font__p--line-height;
 
 	.make-font-a-little-smaller(@font__p--font-size);
 	.make-font-smaller(@font__p--font-size);
@@ -126,11 +127,12 @@
     .make-line-height-a-lot-smaller(@font__p--line-height);
 		
     @media @mobile {
-        padding: 4em 0 1.5em;
+        padding: 2.5em 0 1.5em;
     }
 		
     .responsivecolumns & {
-        padding: 4em 0 1.5em;
+        padding: 2.5em 0 1.5em;
+    }
 
     .blogpostlist__post-image ~ & {
         padding: 4.5em 1.5em 1.5em;
@@ -170,29 +172,25 @@ a.blogpostlist__title-link {
 	
 .blogpostlist__post-excerpt p {
 	line-height: 1.5em;
-	color: lighten(@color__p--text, 8%);
+    padding: 0.5em 0 0;
 	
 	@media @mobile {
 		display: none;
 	}
-
-    .style--light & {
-        color: fade(@contrast--light, 80%);
-    }
-
-    .style--accent & {
-        color: fade(@contrast--accent, 80%);
-    }
-
-    .style--dark & {
-        color: fade(@contrast--dark, 80%);
-    }
+	
+	.responsivecolumns & {
+		display: none;
+	}
 }
 
 // Read more
 
 a.blogpostlist__read-more {
 	.link;
+    
+    &:after {
+        content: "...";
+    }
 }
 
 // Footer

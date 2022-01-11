@@ -61,14 +61,13 @@
     width: 80%;
 	max-width: @layout-width-desktop;
 	margin: 0 auto;
-	margin-bottom: 2em;
 
     @media @mobile {
         width: 90%;
     }
 
     &:last-child {
-        margin-bottom: 0;
+        margin-bottom: 2em;
     }
 
     [data-name="row"] .row__container > & {
@@ -85,6 +84,7 @@
 .widget[data-name="responsivecolumns"] {
     .widget {
         width: 100%;
+
         @media @mobile {
             margin: 0 0 30px;
         }
@@ -150,20 +150,20 @@ hr.line__rule {
 	background-color: fade(@color__p--text, 60%);
 
     .style--light & {
-        background-color: darken(@color--light, 12%);
+        background-color: fade(@contrast--light, 60%);
     }
 
     .style--accent & {
-        background-color: darken(@color--accent, 12%);
+        background-color: fade(@contrast--accent, 60%);
     }
 
     .style--dark & {
-        background-color: darken(@color--accent, 12%);
+        background-color: fade(@contrast--dark, 60%);
     }
 }
 
 // Page Title Widget
 
 .pagetitle-text {
-    h1;
+    .heading--1;
 }

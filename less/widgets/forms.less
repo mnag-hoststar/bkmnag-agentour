@@ -1,11 +1,5 @@
 // FORMS
 
-// Conditional Mixins
-
-.form-widget-background--spacing() when not (@color__form--background = @color__body--background) {
-	padding: 2em 0;
-}
-
 // Global Form Styles
 
 .widget[data-name="signupform"],
@@ -63,13 +57,6 @@
             margin-bottom: 0;
         }
     }
-    
-    // Label
-    
-    label {
-        margin: 0 0 0.3em;
-        line-height: 1.5em;
-    }
 }
 
 label {
@@ -108,19 +95,19 @@ textarea {
 
     .style--light & {
         background-color: @color--light;
-        border-color: darken(@color--light, 10%);
+        border-color: fade(@contrast--light, 30%);
         color: @contrast--light;
     }
 
     .style--accent & {
         background-color: @color--accent;
-        border-color: fade(@contrast--accent, 85%);
+        border-color: fade(@contrast--accent, 60%);
         color: @contrast--accent;
     }
 
     .style--dark & {
         background-color: @color--dark;
-        border-color: fade(@contrast--dark, 85%);
+        border-color: fade(@contrast--dark, 60%);
         color: @contrast--dark;
     }
 
@@ -129,18 +116,18 @@ textarea {
     }
 	
 	&:hover {
-    	border: 2px solid darken(@color__form--border, 8%);
+    	border: 2px solid darken(@color__form--border, 10%);
 
        .style--light & {
-            border-color: darken(@color--light, 15%);
+            border-color: darken(fade(@contrast--light, 30%), 10%);
         }
 
         .style--accent & {
-            border-color: fade(@contrast--accent, 95%);
+            border-color: darken(fade(@contrast--accent, 60%), 10%);
         }
 
         .style--dark & {
-            border-color: fade(@contrast--dark, 95%);
+            border-color: darken(fade(@contrast--dark, 60%), 10%);
         } 
 	}
 	
@@ -168,72 +155,6 @@ textarea {
 
 textarea {
     display: block;
-}
-
-// Placeholders
-
-::-webkit-input-placeholder {
-   color: @color-text--light;
-
-   .style--light & {
-        color: @contrast--light;
-    }
-
-    .style--accent & {
-        color: @contrast--accent;
-    }
-
-    .style--dark & {
-        color: @contrast--dark;
-    }
-}
-
-:-moz-placeholder {
-   color: @color-text--light;
-
-   .style--light & {
-        color: @contrast--light;
-    }
-
-    .style--accent & {
-        color: @contrast--accent;
-    }
-
-    .style--dark & {
-        color: @contrast--dark;
-    }
-}
-
-::-moz-placeholder {
-   color: @color-text--light;
-
-   .style--light & {
-        color: @contrast--light;
-    }
-
-    .style--accent & {
-        color: @contrast--accent;
-    }
-
-    .style--dark & {
-        color: @contrast--dark;
-    }
-}
-
-:-ms-input-placeholder {
-   color: @color-text--light;
-
-   .style--light & {
-        color: @contrast--light;
-    }
-
-    .style--accent & {
-        color: @contrast--accent;
-    }
-
-    .style--dark & {
-        color: @contrast--dark;
-    }
 }
 
 input:focus {
@@ -267,6 +188,7 @@ input:focus {
 		label[for*="input--terms"] span a.form__link {
 			.paragraph;
 			line-height: 1.3em;
+            text-align: left;
 
             .style--light & {
                 color: @contrast--light;
@@ -295,19 +217,19 @@ input:focus {
 			height: 100% !important;
 
 			&:hover + label:before {
-				border: 2px solid darken(@color__form--border, 8%);
-
-                .style--light & {
-                    border-color: darken(@color--light, 15%);
+                border: 2px solid darken(@color__form--border, 10%);
+        
+               .style--light & {
+                    border-color: darken(fade(@contrast--light, 30%), 10%);
                 }
-
+        
                 .style--accent & {
-                    border-color: fade(@contrast--accent, 95%);
+                    border-color: darken(fade(@contrast--accent, 60%), 10%);
                 }
-
+        
                 .style--dark & {
-                    border-color: fade(@contrast--dark, 95%);
-                }
+                    border-color: darken(fade(@contrast--dark, 60%), 10%);
+                } 
 			}
 
 			&:checked + label:before {
@@ -333,6 +255,10 @@ input:focus {
 			&:focus + label:before,
 			&:focus:checked + label:before {
 				border: 2px solid @color-highlight--light;
+        
+                .style--accent & {
+                    border-color: @color--dark;
+                }
 			}
 		}
 
@@ -349,6 +275,7 @@ input:focus {
 				cursor: pointer;
 				display: block;
 				margin-left: 1em * 2.5;
+                padding: 0;
 				.transform-scale(1);
 				word-break: break-word;
                 min-height: @font__p--line-height;
@@ -372,17 +299,17 @@ input:focus {
 
                     .style--light & {
                         background-color: @color--light;
-                        border-color: darken(@color--light, 10%);
+                        border-color: fade(@contrast--light, 30%);
                     }
 
                     .style--accent & {
                         background-color: @color--accent;
-                        border-color: fade(@contrast--accent, 95%);
+                        border-color: fade(@contrast--accent, 60%);
                     }
 
                     .style--dark & {
                         background-color: @color--dark;
-                        border-color: fade(@contrast--dark, 95%);
+                        border-color: fade(@contrast--dark, 60%);
                     }
 				}
 
@@ -399,6 +326,7 @@ input:focus {
 				&:before {
 					.border-radius(1em);
 				}
+
 				&:after {
 					content: " ";
 					.border-radius(1em);
@@ -468,7 +396,6 @@ input:focus {
 .select-wrap {
     position: relative;
     max-width: 50%;
-	margin-top: 1em;
 
     @media @mobile {
         max-width: 100%;
@@ -531,35 +458,35 @@ input:focus {
     }
 
     .style--light & {
-        border-color: darken(@color--light, 10%);
+        border-color: fade(@contrast--light, 30%);
         color: @contrast--light;
     }
 
     .style--accent & {
-        border-color: fade(@contrast--accent, 85%);
+        border-color: fade(@contrast--accent, 60%);
         color: @contrast--accent;
     }
 
     .style--dark & {
-        border-color: fade(@contrast--dark, 85%);
+        border-color: fade(@contrast--dark, 60%);
         color: @contrast--dark;
     }
 
     &:hover {
-		border: 2px solid darken(@color__form--border, 8%);
 		background-color: transparent;
+    	border: 2px solid darken(@color__form--border, 10%);
 
-        .style--light & {
-            border-color: darken(@color--light, 15%);
+       .style--light & {
+            border-color: darken(fade(@contrast--light, 30%), 10%);
         }
 
         .style--accent & {
-            border-color: fade(@contrast--accent, 95%);
+            border-color: darken(fade(@contrast--accent, 60%), 10%);
         }
 
         .style--dark & {
-            border-color: fade(@contrast--dark, 95%);
-        }
+            border-color: darken(fade(@contrast--dark, 60%), 10%);
+        } 
     }
 
     &:focus {
@@ -607,9 +534,11 @@ input:focus {
     input.error {
         border: none !important;
     }
+
     textarea.error {
         border: 1px solid @message-color--error !important;
     }
+
     .form-group {
         .error {
             border-bottom: 2px solid @message-color--error !important;
@@ -686,4 +615,70 @@ input:focus {
 			}
 		}
 	}
+}
+
+// Placeholders
+
+::-webkit-input-placeholder {
+   color: @color-text--light;
+
+   .style--light & {
+        color: fade(@contrast--light, 30%);
+    }
+
+    .style--accent & {
+        color: fade(@contrast--accent, 30%);
+    }
+
+    .style--dark & {
+        color: fade(@contrast--dark, 30%);
+    }
+}
+
+:-moz-placeholder {
+   color: @color-text--light;
+
+   .style--light & {
+        color: fade(@contrast--light, 30%);
+    }
+
+    .style--accent & {
+        color: fade(@contrast--accent, 30%);
+    }
+
+    .style--dark & {
+        color: fade(@contrast--dark, 30%);
+    }
+}
+
+::-moz-placeholder {
+   color: @color-text--light;
+
+   .style--light & {
+        color: fade(@contrast--light, 30%);
+    }
+
+    .style--accent & {
+        color: fade(@contrast--accent, 30%);
+    }
+
+    .style--dark & {
+        color: fade(@contrast--dark, 30%);
+    }
+}
+
+:-ms-input-placeholder {
+   color: @color-text--light;
+
+   .style--light & {
+        color: fade(@contrast--light, 30%);
+    }
+
+    .style--accent & {
+        color: fade(@contrast--accent, 30%);
+    }
+
+    .style--dark & {
+        color: fade(@contrast--dark, 30%);
+    }
 }

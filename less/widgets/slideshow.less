@@ -58,7 +58,7 @@
 	bottom: 0;
 	margin: 0;
 	padding: 3em 0;
-	background-color: fade(@color__slideshow-caption--background, 80%);
+	background-color: @color__slideshow-caption--background;
 	text-align: center;
 	.display-flex(flex);
     .flex-direction(column);
@@ -128,7 +128,8 @@
 		height: 2.5em;
 		width: 2.5em;
 	    border: none;
-		background-color: fade(@color__slideshow-pagination-item--background, 80%);
+		background-color: @color__slideshow-caption--background;
+		color: @color__slideshow-pagination-item--text;
 		.box-shadow(none);
 		.transition(background-color);
 		z-index: 2;
@@ -139,6 +140,7 @@
 			display: block;
 			margin-right: 0;
     		margin-left: 0;
+			width: 100%;
 			font-size: 1em;
 		}
 	}
@@ -149,13 +151,13 @@
 
 	.previous-button {
 		left: 50%;
-    	margin-left: -3.75em;
+    	margin-left: -4.25em;
 		padding-right: 0em;
 	}
 
 	.next-button {
     	right: 50%;
-    	margin-right: -3.75em;
+    	margin-right: -4.25em;
 		padding-left: 0.3em;
 	}
 
@@ -175,10 +177,11 @@
 // Slide Pagination
 
 .responsiveslideshow__slide-pagination {
+	z-index: 1;
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	z-index: 1;
+	text-align: center;
 
 	.pagination-list {
 		margin-top: 0;
@@ -188,7 +191,7 @@
 	
 .responsiveslideshow__pagination-item {
 	position: relative;
-    margin: 0 0 40px;
+    margin: 20px 0 40px;
 	padding: 0 8px;
     height: 0;
 
@@ -198,15 +201,17 @@
 	}
 
 	.button {
-		background-color: @color__slideshow-pagination-item--background;
-		width: 18px;
-		height: 18px;
 		display: block;
 		overflow: hidden;
 		text-indent: -10000px;
+		background-color: @color__slideshow-pagination-item--text;
+		border: 2px solid @color__slideshow-pagination-item--text;
+		width: 18px;
+		height: 18px;
+		min-height: 18px;
 		.border-radius(50%);
 		padding: 0;
-		border: 4px solid @color__slideshow-pagination-item--text;
+		box-shadow: 0 0 10px @color__slideshow-caption--background;
 
 		@media @tablet {
 			width: 16px;
@@ -229,8 +234,8 @@
 
 	&.selected .button {
 		top: -1px;
-		background: @color__slideshow-pagination-item--text--selected;
-		border-width: 3px;
+		border: 2px solid @color__slideshow-pagination-item--text--selected;
+		background: fade(@color__slideshow-pagination-item--text--selected, 80%);
 		.transform-scale(1.5);
 
 		@media @tablet {

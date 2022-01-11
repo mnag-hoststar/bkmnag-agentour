@@ -1,5 +1,14 @@
 // ECOMMERCE - PRODUCT LIST
 
+// Product List in the Shop
+
+#page-zones__main-widgets__productslist {
+    @media @mobile {
+        max-width: 90%;
+        margin: 0 auto 1em;
+    }
+}
+
 // Title
 
 .ecomproductslist__listing-title {
@@ -25,12 +34,12 @@
         @media @tablet {
             padding: 10px 0;
             width: 80%;
+            max-width: @layout-width-desktop;
             margin: 0 auto;
-            max-width: 800px;
         }
     
         @media @mobile {
-            width: 90%;
+            width: 100%;
         }
 
 		.responsivecolumns & {
@@ -104,7 +113,6 @@
         -webkit-align-items: stretch;
         -ms-flex-align: stretch;
         align-items: stretch;
-        margin-bottom: 1em;
     }
 
     // Form Group
@@ -148,35 +156,8 @@
         }
     }
 
-    .input {
+    input {
         height: 45px;
-    }
-
-
-    .button--submit {
-        @media @tablet-horizontal {
-            width: 50px;
-            display: block;
-            position: relative;
-            padding: 0;
-            font-size: 0;
-
-            &:after {
-                content: '\f002';
-                font-family: 'FontAwesome', sans-serif;
-                position: absolute;
-                text-align: center;
-                line-height: 44px;
-                color: @color__button--text;
-                font-size: 18px;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                text-indent: 0;
-                margin-left: 0;
-            }
-        }
     }
 }
 
@@ -219,8 +200,14 @@
 	// Form Group
 	
 	.form-group {
-        margin: 0 5px;
+        margin-bottom: 0;
+        padding: 0 5px;
         flex-grow: 1;
+        min-width: 100%/3;
+
+		@media @tablet {
+			min-width: 100%/2;
+		}
 
 		@media @mobile {
 			width: 100%;
@@ -237,7 +224,7 @@
 		// Label
 
 		.label {
-			padding: 5px 0;
+			padding: 1.5em 0 0.5em 0;
 			font-family: @font__h4--font-family;
 			font-size: 12px;
 			letter-spacing: 2px;

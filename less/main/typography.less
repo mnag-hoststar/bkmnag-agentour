@@ -159,10 +159,9 @@ h6, .heading--6, .contentgroup__h6 {
 p, .paragraph,
 a, .link {
 	padding: 0.5em 0;
-    hyphens: auto;
+	hyphens: auto;
 }
 
-p, .paragraph, ul, ol, li, .contentgroup__body {
 p, .paragraph,
 ul, ol, li,
 .contentgroup__body {
@@ -175,15 +174,15 @@ ul, ol, li,
 	.make-line-height-a-lot-smaller(@font__p--line-height);
 
 	.style--light & {
-		color: fade(@contrast--light, 80%);
+		color: @contrast--light;
 	}
 
 	.style--accent & {
-		color: fade(@contrast--accent, 80%);
+		color: @contrast--accent;
 	}
 
 	.style--dark & {
-		color: fade(@contrast--dark, 80%);
+		color: @contrast--dark;
 	}
 }
 
@@ -195,18 +194,18 @@ b, strong {
 
 u {
 	text-decoration: none;
-	border-bottom: 1px solid lighten(@color__p--text, 20%);
+	border-bottom: 1px solid fade(@color__p--text, 20%);
 
 	.style--light & {
-		border-color: fade(@contrast--light, 65%);
+		border-bottom: @contrast--light;
 	}
 
 	.style--accent & {
-		border-color: fade(@contrast--accent, 65%);
+		border-bottom: @contrast--accent;
 	}
 
 	.style--dark & {
-		border-color: fade(@contrast--dark, 65%);
+		border-bottom: @contrast--dark;
 	}
 }
 
@@ -216,20 +215,20 @@ label:not(.clicktocall__label),
 .label-text,
 .file-name__label {
 	font-family: @font__h4--font-family;
-	color: @color-text--faded;
+	color: @color-text--lighter;
 	word-wrap: normal;
 	hyphens: none;
 
 	.style--light & {
-		color: fade(@contrast--light, 75%) !important;
+		color: fade(@contrast--light, 80%) !important;
 	}
 
 	.style--accent & {
-		color: fade(@contrast--accent, 75%) !important;
+		color: fade(@contrast--accent, 80%) !important;
 	}
 
 	.style--dark & {
-		color: fade(@contrast--dark, 75%) !important;
+		color: fade(@contrast--dark, 80%) !important;
 	}
 }
 
@@ -246,11 +245,6 @@ a,
 	margin-top: 0;
 	margin-bottom: 0;
 	padding: 0;
-
-	&,
-	&:hover {
-		text-decoration: none;
-	}
 
 	.style--light & {
 		color: @color--accent;
@@ -312,16 +306,20 @@ a,
 
 .widget[data-name="content"] a {
 	margin: 0;
+	padding: 0;
 
 	&,
 	&:hover {
 		border-bottom: none;
+		background-color: transparent;
 	}
 }
 
 // Preformatted and Code Text
 
-pre, code {
+pre,
+code {
+	.paragraph;
 	display: block;
 	margin: 1em 0;
 	padding: 1em 1.5em;
@@ -345,7 +343,7 @@ pre, code {
 }
 
 code {
-	border-left: 10px solid @color-highlight;
+	border-left: 2px solid @color-highlight;
 
 	.style--light & {
 		border-color: @color--accent;
@@ -376,7 +374,7 @@ ul {
 	}
 }
 
-.bk-zone ol {
+ol {
 	margin: 0.5em 0;
 	padding-left: 0;
 	counter-reset: ordered-counter;
@@ -398,11 +396,23 @@ ul {
 			left: 0;
 			bottom: 0;
 			.box-sizing(border-box);
-			border-right: 1px solid @color-text--lighter;
+			border-right: 1px solid @color__p--text;
 			font-family: @font__h1--font-family;
 			content: counter(ordered-counter);
 			counter-increment: ordered-counter;
 			text-align: left;
+
+			.style--light & {
+				border-color: darken(@color--light, 10%);
+			}
+		
+			.style--accent & {
+				border-color: lighten(@color--accent, 10%);
+			}
+		
+			.style--dark & {
+				border-color: lighten(@color--dark, 10%);
+			}
 		}
 	}
 }
