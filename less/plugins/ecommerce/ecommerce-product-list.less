@@ -69,6 +69,13 @@
 // Product Search
 
 .product-filters .fieldset--search {
+    @media @mobile {
+        width: 100%;
+    }
+    
+    .responsivecolumns & {
+        width: 100%;
+    }
 	
 	// Label
 	
@@ -112,6 +119,18 @@
         &:first-child {
             flex-grow: 1;
             margin-right: 10px;
+
+            @media @mobile {
+                width: 100%;
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+
+            .responsivecolumns & {
+                width: 100%;
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
         }
     }
 
@@ -206,11 +225,13 @@
 		@media @mobile {
 			width: 100%;
 			margin: 8px 0;
+            padding: 0;
 		}
 
 		.responsivecolumns & {
 			width: 100%;
 			margin: 8px 0;
+            padding: 0;
 		}
 
 		// Label
@@ -250,6 +271,10 @@
 			}
 
 			@media @mobile {
+				.select.small;
+			}
+
+			.responsivecolumns & {
 				.select.small;
 			}
 		}
@@ -304,23 +329,22 @@
     -ms-flex-align: stretch;
     align-items: stretch;
     border-top: 1px solid fade(@color__p--text, 16%);
+    border-left: 1px solid fade(@color__p--text, 16%);
 
     .style--light & {
         border-top: 1px solid fade(@contrast--light, 16%);
+        border-left: 1px solid fade(@contrast--light, 16%);
     }
 
     .style--accent & {
         border-top: 1px solid fade(@contrast--accent, 16%);
+        border-left: 1px solid fade(@contrast--accent, 16%);
     }
 
     .style--dark & {
         border-top: 1px solid fade(@contrast--dark, 16%);
+        border-left: 1px solid fade(@contrast--dark, 16%);
     }
-	
-	.responsivecolumns & {
-		border-left: 1px solid rgba(66,77,81,0.16);
-		border-top: 1px solid rgba(66,77,81,0.16);
-	}
 	
 	.columns-three-left &,
 	.columns-three-right &,
@@ -429,9 +453,18 @@
         line-height: 1;
         height: auto;
     }
+    
+    .responsivecolumns & {
+        line-height: 1;
+        height: auto;
+    }
 	
     .image {
         @media @mobile {
+            max-height: 200px;
+        }
+
+        .responsivecolumns & {
             max-height: 200px;
         }
     }
@@ -445,6 +478,11 @@
 			line-height: 1;
 			height: auto;
 		}
+
+		.responsivecolumns & {
+			line-height: 1;
+			height: auto;
+		}
 	}
 }
 
@@ -454,6 +492,11 @@
     text-align: center;
 
     @media @mobile {
+        padding-top: 0;
+        border-top: none;
+    }
+
+    .responsivecolumns & {
         padding-top: 0;
         border-top: none;
     }

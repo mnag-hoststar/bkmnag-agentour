@@ -473,6 +473,10 @@ input:focus {
     @media @mobile {
         max-width: 100%;
     }
+
+    .responsivecolumns & {
+        max-width: 100%;
+    }
 	
     // Icon
 
@@ -628,6 +632,18 @@ input:focus {
 		&:first-child {
             flex-grow: 1;
 			padding-right: 0.5em;
+
+            @media @mobile {
+                width: 100%;
+                margin-bottom: 10px;
+                padding-right: 0;
+            }
+
+            .responsivecolumns & {
+                width: 100%;
+                margin-bottom: 10px;
+                padding-right: 0;
+            }
 		}
 	}
 

@@ -246,10 +246,10 @@
     @media @mobile {
 		width: 100%;
     }
-	
-	&:last-child {
-		margin-bottom: @item--margin-size;
-	}
+
+    .responsivecolumns & {
+		width: 100%;
+    }
 }
 
 .item--margin-size--3to1-cols(@item--margin-size: 1%) {
@@ -263,10 +263,10 @@
     @media @mobile {
 		width: 100%;
     }
-	
-	&:last-child {
-		margin-bottom: @item--margin-size;
-	}
+
+    .responsivecolumns & {
+		width: 100%;
+    }
 }
 
 .header-border-removal() when (@color__header--background = @color__header--border) {
