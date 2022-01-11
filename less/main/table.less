@@ -40,6 +40,14 @@ th {
 	line-height: @font__h4--line-height;
 	letter-spacing: @font__p--letter-spacing;
 	color: @color__h4--text;
+	
+	.make-font-a-little-smaller(@font__h4--font-size);
+	.make-font-smaller(@font__h4--font-size);
+	.make-font-a-lot-smaller(@font__h4--font-size);
+	
+	.make-line-height-a-little-smaller(@font__h4--line-height);
+	.make-line-height-smaller(@font__h4--line-height);
+	.make-line-height-a-lot-smaller(@font__h4--line-height);
 
 	.style--light & {
 		border-bottom-color: @contrast--light;
@@ -86,6 +94,14 @@ td {
 	font-size: @font__p--font-size;
 	line-height: @font__p--line-height;
 	letter-spacing: @font__p--letter-spacing;
+	
+	.make-font-a-little-smaller(@font__p--font-size);
+	.make-font-smaller(@font__p--font-size);
+	.make-font-a-lot-smaller(@font__p--font-size);
+	
+	.make-line-height-a-little-smaller(@font__p--line-height);
+	.make-line-height-smaller(@font__p--line-height);
+	.make-line-height-a-lot-smaller(@font__p--line-height);
 
 	.style--light & {
 		border-bottom-color: fade(@contrast--light, 60%);

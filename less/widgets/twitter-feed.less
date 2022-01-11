@@ -94,6 +94,10 @@
 	.make-font-a-little-smaller(@font__p--font-size);
 	.make-font-smaller(@font__p--font-size);
 	.make-font-a-lot-smaller(@font__p--font-size);
+	
+    .make-line-height-a-little-smaller(@font__p--line-height);
+    .make-line-height-smaller(@font__p--line-height);
+    .make-line-height-a-lot-smaller(@font__p--line-height);
 }
 
 // Avatar
@@ -120,10 +124,15 @@ a.twitter__account-link {
 	.heading--4;
 	font-size: @font__p--font-size;
 	.twitter__account-link--spacing();
+    line-height: @font__p--line-height;
 	
 	.make-font-a-little-smaller(@font__p--font-size);
 	.make-font-smaller(@font__p--font-size);
 	.make-font-a-lot-smaller(@font__p--font-size);
+	
+    .make-line-height-a-little-smaller(@font__p--line-height);
+    .make-line-height-smaller(@font__p--line-height);
+    .make-line-height-a-lot-smaller(@font__p--line-height);
 
     .style--light & {
         color: @contrast--light;
@@ -156,6 +165,7 @@ a.twitter__account-link {
 	padding: 1.5em 1.5em 1em;
 	font-size: @font__p--font-size;
 	.tweet-metadata--spacing();
+	line-height: 1.5em;
 	
 	.make-font-a-little-smaller(@font__p--font-size);
 	.make-font-smaller(@font__p--font-size);
