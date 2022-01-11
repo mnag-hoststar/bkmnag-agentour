@@ -2,17 +2,33 @@
 
 // General Typography
 
-h1, h2, h3, h4, h5, h6 {
+h1, .heading--1,
+h2, .heading--2,
+h3, .heading--3,
+h4, .heading--4,
+h5,
+h6 {
 	margin: 0;
 	padding: 0.5em 0;
-	
-	+ h2, + h3, + h4, + h5, + h6 {
+
+	+ h2, + .heading--2,
+	+ h3, + .heading--3,
+	+ h4, + .heading--4,
+	+ h5,
+	+ h6 {
 		padding-top: 0;
 	}
 }
 
-h1, h2, h3, h4, h5, h6, [class*="contentgroup__h"] {
-    word-break: break-word;
+h1, .heading--1,
+h2, .heading--2,
+h3, .heading--3,
+h4, .heading--4,
+h5,
+h6,
+[class*="contentgroup__h"],
+label, .label {
+	word-break: break-word;
 
 	.style--light & {
 		color: @contrast--light;
@@ -29,11 +45,18 @@ h1, h2, h3, h4, h5, h6, [class*="contentgroup__h"] {
 
 // Break long words.
 
-h1, h2, h3, h4, h5, h6, p {
+h1, .heading--1,
+h2, .heading--2,
+h3, .heading--3,
+h4, .heading--4,
+h5,
+h6,
+p {
 	word-break: break-word;
 }
 
-h1, .heading--1, .contentgroup__h1 {
+h1, .heading--1,
+.contentgroup__h1 {
 	font-family: @font__h1--font-family;
 	font-weight: @font__h1--font-weight;
 	font-size: @font__h1--font-size;
@@ -50,7 +73,8 @@ h1, .heading--1, .contentgroup__h1 {
 	.make-line-height-a-lot-smaller(@font__h1--line-height);
 }
 
-h2, .heading--2, .contentgroup__h2 {
+h2, .heading--2,
+.contentgroup__h2 {
 	font-family: @font__h2--font-family;
 	font-weight: @font__h2--font-weight;
 	font-size: @font__h2--font-size;
@@ -67,7 +91,8 @@ h2, .heading--2, .contentgroup__h2 {
 	.make-line-height-a-lot-smaller(@font__h2--line-height);
 }
 
-h3, .heading--3, .contentgroup__h3 {
+h3, .heading--3,
+.contentgroup__h3 {
 	font-family: @font__h3--font-family;
 	font-size: @font__h3--font-size;
 	font-weight: @font__h3--font-weight;
@@ -84,7 +109,8 @@ h3, .heading--3, .contentgroup__h3 {
 	.make-line-height-a-lot-smaller(@font__h3--line-height);
 }
 
-h4, .heading--4, .contentgroup__h4 {
+h4, .heading--4,
+.contentgroup__h4 {
 	font-family: @font__h4--font-family;
 	font-weight: @font__h4--font-weight;
 	font-size: @font__h4--font-size;
@@ -101,7 +127,8 @@ h4, .heading--4, .contentgroup__h4 {
 	.make-line-height-a-lot-smaller(@font__h4--line-height);
 }
 
-h5, .heading--5, .contentgroup__h5 {
+h5,
+.contentgroup__h5 {
 	font-family: @font__h4--font-family;
 	font-weight: @font__h4--font-weight;
 	font-size: @font__h4--font-size;
@@ -118,7 +145,8 @@ h5, .heading--5, .contentgroup__h5 {
 	.make-line-height-a-lot-smaller(@font__h4--line-height);
 }
 
-h6, .heading--6, .contentgroup__h6 {
+h6,
+.contentgroup__h6 {
 	padding-bottom: 0.2em;
 	font-family: @font__h4--font-family;
 	font-weight: @font__h4--font-weight;
