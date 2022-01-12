@@ -2,7 +2,7 @@
 
 // Product
 
-.ecomproduct  {
+.ecomproduct {
     margin-bottom: 2em;
 
     @media @tablet {
@@ -335,7 +335,27 @@
             margin-bottom: 5px;
             text-transform: uppercase;
         }
+
+        .ecomproduct__button {
+            margin-bottom: 1em;
+            text-align: center;
+        
+            @media @mobile {
+                width: 100%;
+            }
+    
+            &:before {
+                float: none;
+            }
+        }
     }
+}
+
+// Paypal Button
+
+.ecomproduct__paypal-commerce-button-container {
+    width: auto;
+    margin-top: 1em;
 }
 
 // Product Attributes
