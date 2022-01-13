@@ -26,11 +26,27 @@
     }
 }
 
+// Responsive Column Widgets
+
+.widget[data-name="responsivecolumns"] {
+    width: 80%;
+	max-width: @layout-width-desktop;
+	margin: 0 auto;
+
+    @media @mobile {
+        width: 100%;
+    }
+
+    .row--width-no-padding & {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
 .widget[data-name="content"], 
 .row:not(.row--width-no-padding) .widget[data-name="contentgroup"],
 .widget[data-name="pagetitle"],
 .widget[data-widget-type="pagetitle"],
-.widget[data-name="responsivecolumns"],
 .widget[data-name="signupform"],
 .widget[data-name="contactform"],
 .widget[data-name="advancedcontactform"],
@@ -53,6 +69,7 @@
 .widget[data-name="yelpreview"],
 .widget[data-name="errormessages"],
 .widget[data-name="blogsearch"],
+.widget[data-name="blogpostlist"],
 .widget[data-name="ecombasket"],
 .widget[data-name="ecomcategorieslist"],
 .widget[data-name="ecombasketsummary"],
@@ -70,36 +87,12 @@
         margin-bottom: 2em;
     }
 
-    [data-name="row"] .row__container > & {
-        margin-bottom: 16px;
-    }
-
-    [data-name="row"] & {
-        width: 100%;
-    }
-}
-
-// Responsive Column Widgets
-
-.widget[data-name="responsivecolumns"] {
-    .widget {
+    .responsivecolumns & {
         width: 100%;
 
         @media @mobile {
-            margin: 0 0 30px;
+            width: 90%;
         }
-    }
-
-    .widget[data-name="content"] {
-
-        @media @mobile {
-            margin-bottom: 20px;
-        }
-    }
-
-    .row--width-no-padding & {
-        max-width: 100%;
-        width: 100%;
     }
 }
 
@@ -123,7 +116,6 @@
 .widget[data-name="gallery"],
 .widget[data-name="blogpost"],
 .widget[data-widget-type="blogpost"],
-.widget[data-name="blogpostlist"],
 .widget[data-name="ecomproductslist"],
 .widget[data-name="ecomfeaturedproducts"],
 .widget[data-name="ecomproduct"],

@@ -1,5 +1,13 @@
 // TWITTER FEED
 
+// Tweet Wrap
+
+.twitter__tweet-wrap {
+	.profile & {
+		margin-left: 4.6em;
+	}
+}
+
 // Tweet List
 
 .twitter__tweet-list {
@@ -12,7 +20,7 @@
 
 // Tweet Item
 
-.tweet-item {
+.twitter__tweet-item {
 	display: flex;
 	padding: 0;
 	.item--margin-size--2to1-cols();
@@ -42,12 +50,27 @@
     .make-line-height-a-little-smaller(@font__p--line-height);
     .make-line-height-smaller(@font__p--line-height);
     .make-line-height-a-lot-smaller(@font__p--line-height);
+
+	.profile & {
+		width: 100%;
+		background-color: transparent;
+		margin: 2em 0;
+		padding: 0;
+		
+		&:last-child {
+			margin-bottom: 2em;
+		}
+	}
 }
 
 // Avatar
 
 .twitter__avatar {
 	margin: 0.5em 1em 0 0;
+
+	.profile & {
+		display: none;
+	}
 	
 	a,
 	&-image {
@@ -81,6 +104,11 @@ a.twitter__account-link {
     .style--dark & {
         color: @contrast--dark;
     }
+
+	.profile & {
+		padding: 0 0 0.3em;
+		min-height: 0;
+	}
 }
 
 // Content Wrap
@@ -111,6 +139,12 @@ a.twitter__account-link {
 	.make-font-a-little-smaller(@font__p--font-size);
 	.make-font-smaller(@font__p--font-size);
 	.make-font-a-lot-smaller(@font__p--font-size);
+
+	.profile & {
+		position: static;
+    	display: block;
+		padding: 0.5em 0 0 0;
+	}
 	
 	// Twitter link at the end.
 	

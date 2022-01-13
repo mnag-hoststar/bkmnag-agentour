@@ -40,6 +40,19 @@
 }
 
 .blogsearch__form {
-	max-width: 900px;
+	max-width: @layout-width-desktop;
     margin: 0 auto;
+	width: 80%;
+
+	@media @mobile {
+		width: 90%;
+	}
+		
+	.responsivecolumns & {
+		width: 100%;
+
+		@media @mobile {
+			width: 90%;
+		}
+	}
 }

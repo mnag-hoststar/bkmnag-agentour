@@ -213,7 +213,7 @@
         "slideshow": {
             "color__slideshow-caption--background": "fade(@color__gallery-caption--background, 80%)",
             "color__slideshow-title--text": "#fff",
-            "color__slideshow-description--text": "#bebebe",
+            "color__slideshow-description--text": "#fff",
             "color__slideshow-pagination-item--text": "#fff",
             "color__slideshow-pagination-item--text--selected": "fade(@color__slideshow-pagination-item--text, 80%)"
         },

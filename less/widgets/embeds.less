@@ -3,9 +3,21 @@
 // Code
 
 .widget[data-name="embed"] {
-	width: 100%;
+	width: 80%;
 	max-width: @layout-width-desktop;
 	margin: 0 auto;
+
+	@media @mobile {
+		width: 90%;
+	}
+		
+	.responsivecolumns & {
+		width: 100%;
+
+		@media @mobile {
+			width: 90%;
+		}
+	}
 }
 
 .widget.embed .embed-default,

@@ -49,7 +49,7 @@
     .display-flex(flex);
     .align-items(center, center);
     min-height: 800px;
-    padding: 60px 30px;
+    padding: 60px 0;
     z-index: 1;
 
     @media @tablet-horizontal {
@@ -70,17 +70,13 @@
 
 .feature__content-inner-wrap {
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto 0 5%;
+    max-width: @layout-max-width;
+    margin: 0 auto;
     text-align: left;
-
-    @media @tablet {
-        width: 80%;
-    }
+    width: 80%;
 
     @media @mobile {
-        width: 100%;
-        margin: 0;
+        width: 90%;
     }
 }
 
