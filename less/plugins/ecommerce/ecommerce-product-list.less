@@ -22,57 +22,34 @@
 // Product Filters
 
 .product-filters {
-	
-	// Legend
-
-	.legend {
-		display: none;
-	}
-	
-	.fieldset--search, 
-	.fieldset--filters {
-        @media @tablet {
-            padding: 10px 0;
-            width: 80%;
-            max-width: @layout-width-desktop;
-            margin: 0 auto;
-        }
-    
-        @media @mobile {
-            width: 100%;
-        }
-
-		.responsivecolumns & {
-			background-color: transparent;
-			padding: 0;
-			width: auto;
-			margin: 0 0 1em 0;
-		}
-	}
-	
 	form {
 		max-width: @layout-width-desktop;
 		margin: 0 auto;
 		margin-bottom: 2em;
+        width: 80%;
 
-        .edit & {
-            @media @desktop-small {
-                width: 90%;
-            }
+        @media @mobile {
+            width: 90%;
         }
-
-		@media @desktop-medium {
-			display: block;
-		}
 		
 		.responsivecolumns & {
-			display: block;
+            width: 100%;
+
+            @media @mobile {
+                width: 90%;
+            }
 		}
 	}
 
     .form-group {
         margin-right: 0;
     }
+	
+	// Legend
+
+	.legend {
+		display: none;
+	}
 }
 
 // Product Search
