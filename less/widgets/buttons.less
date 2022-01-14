@@ -7,13 +7,14 @@
 .tweet .button,
 .clicktocall .phone-number-link,
 a.ecomproduct__button,
+button.icon--add.added,
 .contentgroup__link,
 .userregistration fieldset .userregistrationbtn {
     cursor: pointer;
     position: relative;
     display: inline-block;
 	border: 2px solid @color__button--background;
-    padding: 0.5em 2em;
+    padding: 0.7em 2em;
 	min-height: 45px;
     .appearance(none);
     .border-radius(4px);
@@ -30,6 +31,11 @@ a.ecomproduct__button,
 	.make-font-a-little-smaller(@font__button--font-size);
 	.make-font-smaller(@font__button--font-size);
 	.make-font-a-lot-smaller(@font__button--font-size);
+
+	@media @mobile {
+		padding: 0.9em 2em;
+	}
+
 
 	.style--light & {
         border-color: @contrast--light;
@@ -82,12 +88,22 @@ a.ecomproduct__button,
 	}
 	
 	&:before {
+		float: left;
+		margin-top: 1px;
 		margin-right: 0.5em;
 	}
 	
 	&:after {
 		margin-left: 0.5em;
 	}
+}
+
+.widget__buttonwidget,
+.widget__clicktocall,
+.widget__dropbox,
+.widget__tweet,
+.icon--filedownload {
+	margin: 1em 0;
 }
 
 // Click to Call
@@ -117,58 +133,61 @@ a.ecomproduct__button,
 }
 
 .social-link {
-	display: block;
-	text-align: center;
-	line-height: 32px;
-	border: 2px solid @color__button--background !important;
-	color: @color__button--text !important;
-	.transition (all, 0.5s, ease);
-	.border-radius(4px);
-
-	.style--light & {
-        border-color: @contrast--light!important;
-        color: @contrast--light!important;
-    }
-
-    .style--accent & {
-        color: @contrast--accent!important;
-        border-color: @contrast--accent!important;
-    }
-
-    .style--dark & {
-        color: @contrast--dark!important;
-        border-color: @contrast--dark!important;
-    }
-
-	&:hover {
-		text-decoration: none;
-		border: 2px solid @color__button--background--hover !important;
-		color: @color__button--text--hover !important;
-		.transition (all, 0.5s, ease);
-
-		.style--light & {
-            border-color: @color--accent!important;
-            color: @color--accent!important;
-        }
-
-        .style--accent & {
-            border-color: fade(@contrast--accent, 85%)!important;
-            color: fade(@contrast--accent, 85%)!important;
-        }
-
-        .style--dark & {
-            border-color: fade(@contrast--dark, 85%)!important;
-            color: fade(@contrast--dark, 85%)!important;
-        }
-	}
-
-	// Icon
-
-	&:before {
-		margin: 0 auto;
-		padding: 0;
-		font-size: 1.2em;
+	&, .profile & {
 		display: block;
+		text-align: center;
+		line-height: 32px;
+		padding: 0;
+		border: 2px solid @color__button--background !important;
+		color: @color__button--text !important;
+		.transition (all, 0.5s, ease);
+		.border-radius(4px);
+	
+		.style--light & {
+			border-color: @contrast--light!important;
+			color: @contrast--light!important;
+		}
+	
+		.style--accent & {
+			color: @contrast--accent!important;
+			border-color: @contrast--accent!important;
+		}
+	
+		.style--dark & {
+			color: @contrast--dark!important;
+			border-color: @contrast--dark!important;
+		}
+	
+		&:hover {
+			text-decoration: none;
+			border: 2px solid @color__button--background--hover !important;
+			color: @color__button--text--hover !important;
+			.transition (all, 0.5s, ease);
+	
+			.style--light & {
+				border-color: @color--accent!important;
+				color: @color--accent!important;
+			}
+	
+			.style--accent & {
+				border-color: fade(@contrast--accent, 85%)!important;
+				color: fade(@contrast--accent, 85%)!important;
+			}
+	
+			.style--dark & {
+				border-color: fade(@contrast--dark, 85%)!important;
+				color: fade(@contrast--dark, 85%)!important;
+			}
+		}
+	
+		// Icon
+	
+		&:before {
+			margin: 0 auto;
+			padding: 0;
+			font-size: 1.2em;
+			display: block;
+		}
 	}
 }
 
