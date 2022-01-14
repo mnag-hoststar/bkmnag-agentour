@@ -308,67 +308,10 @@ a,
 	}
 }
 
-[data-name="content"] a {
-	display: inline;
-	color: @color-highlight;
-	line-height: 1.3em;
-	overflow: visible;
-	border-bottom: 2px solid @color-highlight--light;
-	background-color: transparent;
-	margin: 0 -2px;
-	padding: 0 2px;
-	height: auto;
-	.transition();
-
-	.style--light & {
-		border-color: @color--accent;
-	}
-
-	.style--accent & {
-		border-color: @contrast--accent;
-	}
-
-	.style--dark & {
-		border-color: @contrast--accent;
-	}
-
-	&:hover {
-		background-color: @color-highlight--lighter;
-		border-bottom: 2px solid @color-highlight--light;
-
-		.style--light & {
-			border-color: @color--accent;
-			color: @color--accent;
-		}
-
-		.style--accent & {
-			border-color: @contrast--accent;
-			color: @contrast--accent;
-		}
-
-		.style--dark & {
-			border-color: @contrast--accent;
-			color: @contrast--dark;
-		}
-	}
-}
-
-.widget[data-name="content"] a {
-	margin: 0;
-	padding: 0;
-
-	&,
-	&:hover {
-		border-bottom: none;
-		background-color: transparent;
-	}
-}
-
 // Preformatted and Code Text
 
 pre,
 code {
-	.paragraph;
 	display: block;
 	margin: 1em 0;
 	padding: 1em 1.5em;
@@ -377,6 +320,12 @@ code {
 	background-color: @color-text--lightest;
 	overflow: auto;
 	font-family: monospace;
+	font-size: @font__p--font-size*0.9;
+	line-height: 1.25em;
+
+	.make-font-a-little-smaller(@font__p--font-size*0.9);
+	.make-font-smaller(@font__p--font-size*0.9);
+	.make-font-a-lot-smaller(@font__p--font-size*0.9);
 
 	.style--light & {
 		background-color: darken(@color--light, 10%);
