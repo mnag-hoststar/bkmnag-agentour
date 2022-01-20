@@ -370,65 +370,6 @@ code {
 	}
 }
 
-// Unordered and Ordered List
-
-ul {
-	margin: 0.5em 0 0.5em 1.2em;
-	padding: 0;
-
-	li {
-		padding: 0 0 0 0.5em;
-		margin: 0 0 1em 0;
-
-		@media @tablet {
-			padding-left: 0;
-		}
-	}
-}
-
-ol {
-	margin: 0.5em 0;
-	padding-left: 0;
-	counter-reset: ordered-counter;
-
-	li {
-		position: relative;
-		padding-left: 3em;
-		margin-bottom: 1em;
-		list-style-type: none;
-
-		// Custom Numbers
-
-		&:before {
-			min-width: 2em;
-			padding: 0 0.4em 0 0;
-			display: inline-block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			.box-sizing(border-box);
-			border-right: 1px solid @color__p--text;
-			font-family: @font__h1--font-family;
-			content: counter(ordered-counter);
-			counter-increment: ordered-counter;
-			text-align: left;
-
-			.style--light & {
-				border-color: darken(@color--light, 10%);
-			}
-		
-			.style--accent & {
-				border-color: lighten(@color--accent, 10%);
-			}
-		
-			.style--dark & {
-				border-color: lighten(@color--dark, 10%);
-			}
-		}
-	}
-}
-
 // Blockquote
 
 blockquote {
@@ -502,6 +443,65 @@ blockquote {
 
 		&:after {
 			display: none;
+		}
+	}
+}
+
+// Unordered and Ordered List
+
+ul {
+	margin: 0.5em 0 0.5em 1.2em;
+	padding: 0;
+
+	li {
+		padding: 0 0 0 0.5em;
+		margin: 0 0 1em 0;
+
+		@media @tablet {
+			padding-left: 0;
+		}
+	}
+}
+
+ol {
+	margin: 0.5em 0;
+	padding-left: 0;
+	counter-reset: ordered-counter;
+
+	li {
+		position: relative;
+		padding-left: 3em;
+		margin-bottom: 1em;
+		list-style-type: none;
+
+		// Custom Numbers
+
+		&:before {
+			min-width: 2em;
+			padding: 0 0.4em 0 0;
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			.box-sizing(border-box);
+			border-right: 1px solid @color__p--text;
+			font-family: @font__h1--font-family;
+			content: counter(ordered-counter);
+			counter-increment: ordered-counter;
+			text-align: left;
+
+			.style--light & {
+				border-color: darken(@color--light, 10%);
+			}
+		
+			.style--accent & {
+				border-color: lighten(@color--accent, 10%);
+			}
+		
+			.style--dark & {
+				border-color: lighten(@color--dark, 10%);
+			}
 		}
 	}
 }
