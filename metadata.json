@@ -2,10 +2,10 @@
     "name":"Agentour",
     "widgetVersion": 2,
     "versionTenCompatible": 1,
-    "thumbnail":"agentour.png",
+    "thumbnail":"images/thumbnail.png",
     "templateType":"standard",
     "pageTypes": [ "home" ],
-    "screenshot":"agentour-screenshot.jpg",
+    "screenshot":"images/screenshot.jpg",
     "images":[
         "images/feature-image.jpg",
         "images/gallery/gallery-image--1.jpg",
