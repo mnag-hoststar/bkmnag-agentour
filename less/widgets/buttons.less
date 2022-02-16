@@ -32,14 +32,9 @@ button.icon--add.added,
 	.make-font-smaller(@font__button--font-size);
 	.make-font-a-lot-smaller(@font__button--font-size);
 
-	@media @mobile {
-		padding: 0.9em 2em;
-	}
-
-
 	.style--light & {
-        border-color: @contrast--light;
-        color: @contrast--light;
+        border-color: transparent;
+        color: @color__button--text;
     }
 
     .style--accent & {
@@ -51,6 +46,10 @@ button.icon--add.added,
         color: @contrast--dark;
         border-color: @contrast--dark;
     }
+
+	@media @mobile {
+		padding: 0.9em 2em;
+	}
 	
     &:hover {
 		border: 2px solid @color__button--background--hover;
@@ -59,8 +58,8 @@ button.icon--add.added,
     	.transition (all, 0.5s, ease);
 
     	.style--light & {
-    		border-color: @color--accent;
-            color: @color--accent;
+    		border-color: @color__button--background--hover;
+            color: @color__button--text--hover;
         }
 
         .style--accent & {
@@ -144,8 +143,8 @@ button.icon--add.added,
 		.border-radius(4px);
 	
 		.style--light & {
-			border-color: @contrast--light!important;
-			color: @contrast--light!important;
+			border-color: @color__button--background !important;
+			color: @color__button--text !important;
 		}
 	
 		.style--accent & {
@@ -165,8 +164,8 @@ button.icon--add.added,
 			.transition (all, 0.5s, ease);
 	
 			.style--light & {
-				border-color: @color--accent!important;
-				color: @color--accent!important;
+				border-color: @color__button--background--hover !important;
+				color: @color__button--text--hover !important;
 			}
 	
 			.style--accent & {
@@ -195,7 +194,7 @@ button.icon--add.added,
 	color: @font-swatch7-color;
 
 	.style--light & {
-		color: @contrast--accent;
+		color: @font-swatch7-color;
 	}
 
 	.style--accent & {

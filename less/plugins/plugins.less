@@ -46,17 +46,9 @@ a.tag-link,
 	font-size: @font__h4--font-size*0.8;
 	font-family: @font__h4--font-family;
 	color: @color__button--text;
-	
-	.make-font-a-little-smaller(@font__h4--font-size, 0.7);
-	.make-font-smaller(@font__h4--font-size, 0.7);
-	.make-font-a-lot-smaller(@font__h4--font-size, 0.7, 0.6);
-	
-	&:hover {
-		background: @color__blogpost-article--background;
-	}
 
 	.style--light & {
-        color: @contrast--light;
+        color: @color__button--text;
     }
 
     .style--accent & {
@@ -66,6 +58,26 @@ a.tag-link,
     .style--dark & {
         color: @contrast--dark;
     }
+	
+	.make-font-a-little-smaller(@font__h4--font-size, 0.7);
+	.make-font-smaller(@font__h4--font-size, 0.7);
+	.make-font-a-lot-smaller(@font__h4--font-size, 0.7, 0.6);
+	
+	&:hover {
+		background: @color__blogpost-article--background;
+
+		.style--light & {
+			background: @color__blogpost-article--background;
+		}
+	
+		.style--accent & {
+			background: @contrast--accent;
+		}
+	
+		.style--dark & {
+			background: @contrast--dark;
+		}
+	}
 }
 
 // Paginatinon

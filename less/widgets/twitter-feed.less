@@ -32,7 +32,7 @@
 	.clearfix();
 
 	.style--light & {
-        background-color: transparent;
+        background-color: @color__twitter-item--background;
     }
 
     .style--accent & {
@@ -94,7 +94,7 @@ a.twitter__account-link {
 	.make-font-a-lot-smaller(@font__p--font-size);
 
     .style--light & {
-        color: @contrast--light;
+        color: @color__h4--text;
     }
 
     .style--accent & {
@@ -181,8 +181,10 @@ a.twitter__account-link {
 .tweet-metadata .via,
 .tweet-metadata a,
 .twitter__timestamp {
+	color: @color__p--text;
+
 	.style--light & {
-        color: @contrast--light;
+        color: @color__p--text;
     }
 
     .style--accent & {

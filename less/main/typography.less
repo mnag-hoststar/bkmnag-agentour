@@ -29,9 +29,10 @@ h6,
 [class*="contentgroup__h"],
 label, .label {
 	word-break: break-word;
+	color: @color__p--text;
 
 	.style--light & {
-		color: @contrast--light;
+		color: @color__p--text;
 	}
 
 	.style--accent & {
@@ -185,7 +186,7 @@ h6,
 			color: @color__p--text;
 		
 			.style--light & {
-				color: @contrast--light;
+				color: @color__p--text;
 			}
 		
 			.style--accent & {
@@ -224,7 +225,7 @@ ul, ol, li,
 	.make-line-height-a-lot-smaller(@font__p--line-height);
 
 	.style--light & {
-		color: @contrast--light;
+		color: @color__p--text;
 	}
 
 	.style--accent & {
@@ -261,7 +262,7 @@ u {
 	border-bottom: 1px solid fade(@color__p--text, 20%);
 
 	.style--light & {
-		border-bottom: @contrast--light;
+		border-bottom: fade(@color__p--text, 20%);
 	}
 
 	.style--accent & {
@@ -284,7 +285,7 @@ label:not(.clicktocall__label),
 	hyphens: none;
 
 	.style--light & {
-		color: fade(@contrast--light, 80%) !important;
+		color: @color-text--lighter !important;
 	}
 
 	.style--accent & {
@@ -309,9 +310,10 @@ a,
 	margin-top: 0;
 	margin-bottom: 0;
 	padding: 0;
+	color: @color__link--text;
 
 	.style--light & {
-		color: @color--accent;
+		color: @color__link--text;
 	}
 
 	.style--accent & {
@@ -342,7 +344,7 @@ pre, code {
 	.make-font-a-lot-smaller(@font__p--font-size*0.9);
 
 	.style--light & {
-		background-color: fade(@contrast--light, 10%);
+		background-color: @color-text--lightest;
 	}
 
 	.style--accent & {
@@ -358,7 +360,7 @@ code {
 	border-left: 2px solid @color-highlight;
 
 	.style--light & {
-		border-color: @contrast--light;
+		border-color: @color-highlight;
 	}
 
 	.style--accent & {
@@ -408,7 +410,7 @@ blockquote {
 		.make-line-height-a-lot-smaller(@font__p--line-height);
 
 		.style--light & {
-			border-color: fade(@contrast--light, 20%);
+			border-color: @color-highlight--lighter;
 		}
 	
 		.style--accent & {
@@ -492,7 +494,7 @@ ol {
 			text-align: left;
 
 			.style--light & {
-				border-color: darken(@color--light, 10%);
+				border-color: @color__p--text;
 			}
 		
 			.style--accent & {

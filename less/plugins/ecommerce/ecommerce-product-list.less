@@ -212,7 +212,7 @@
 			text-transform: uppercase;
 
             .style--light & {
-                color: @contrast--light;
+                color: lighten(@color__p--text, 30%);
             }
 
             .style--accent & {
@@ -296,8 +296,8 @@
     border-left: 1px solid fade(@color__p--text, 16%);
 
     .style--light & {
-        border-top: 1px solid fade(@contrast--light, 16%);
-        border-left: 1px solid fade(@contrast--light, 16%);
+        border-top: 1px solid fade(@color__p--text, 16%);
+        border-left: 1px solid fade(@color__p--text, 16%);
     }
 
     .style--accent & {
@@ -330,6 +330,21 @@
 	width: 100%/4;
 	margin: 0;
 
+    .style--light & {
+        border-right: 1px solid fade(@color__p--text, 16%);
+        .box-shadow(inset 0px -1px 0px 0px fade(@color__p--text, 16%));
+    }
+
+    .style--accent & {
+        border-right: 1px solid fade(@contrast--accent, 16%);
+        .box-shadow(inset 0px -1px 0px 0px fade(@contrast--accent, 16%));
+    }
+
+    .style--dark & {
+        border-right: 1px solid fade(@contrast--dark, 16%);
+        .box-shadow(inset 0px -1px 0px 0px fade(@contrast--dark, 16%));
+    }
+
 	@media @tablet-horizontal {
         padding: 30px;
 		width: 100%/3;
@@ -348,21 +363,6 @@
     .responsivecolumns & {
         width: 100%;
         margin: 0;
-    }
-
-    .style--light & {
-        border-right: 1px solid fade(@contrast--light, 16%);
-        .box-shadow(inset 0px -1px 0px 0px fade(@contrast--light, 16%));
-    }
-
-    .style--accent & {
-        border-right: 1px solid fade(@contrast--accent, 16%);
-        .box-shadow(inset 0px -1px 0px 0px fade(@contrast--accent, 16%));
-    }
-
-    .style--dark & {
-        border-right: 1px solid fade(@contrast--dark, 16%);
-        .box-shadow(inset 0px -1px 0px 0px fade(@contrast--dark, 16%));
     }
 	
 	.columns-three-left &,
@@ -385,7 +385,7 @@
 			.box-shadow(inset 0px 0px 0px 6px fade(@color__p--text, 16%));
 
             .style--light & {
-                .box-shadow(inset 0px 0px 0px 6px fade(@contrast--light, 16%));
+                .box-shadow(inset 0px 0px 0px 6px fade(@color__p--text, 16%));
             }
 
             .style--accent & {
@@ -477,7 +477,7 @@
         color: @color__ecomproductslist-product-title--text;
 
         .style--light & {
-            color: @contrast--light;
+            color: @color__ecomproductslist-product-title--text;
         }
     
 
@@ -503,16 +503,8 @@
     .heading--2;
 	padding: 26px 70px;
 
-    @media @tablet-horizontal {
-        padding: 26px 40px;
-    }
-
-    @media @tablet {
-        padding:  20px;
-    }
-
     .style--light & {
-        color: @contrast--light;
+        color: @color__h2--text;
     }
 
     .style--accent & {
@@ -521,6 +513,14 @@
 
     .style--dark & {
         color: @contrast--dark;
+    }
+
+    @media @tablet-horizontal {
+        padding: 26px 40px;
+    }
+
+    @media @tablet {
+        padding:  20px;
     }
 	
 	// Column styles

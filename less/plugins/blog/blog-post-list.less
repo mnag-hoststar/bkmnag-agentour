@@ -12,18 +12,7 @@
 	.blogpostlist-article-background--spacing();
 	.blogpostlist-widget-background--spacing();
     margin-top: 2em;
-
-    .style--light & {
-        background-color: transparent;
-    }
-
-    .style--accent & {
-        background-color: transparent;
-    }
-
-    .style--dark & {
-        background-color: transparent;
-    }
+    background-color: transparent;
 }
 
 .blogpostlist__post-items {
@@ -38,20 +27,9 @@
 
 .blogpostlist__post-article {
 	position: relative;
+    background-color: transparent;
 	.item--margin-size--3to1-cols();
 	.clearfix();
-
-    .style--light & {
-        background-color: transparent;
-    }
-
-    .style--accent & {
-        background-color: transparent;
-    }
-
-    .style--dark & {
-        background-color: transparent;
-    }
 	
 	@media @mobile {
 		.display-flex(flex);
@@ -152,7 +130,7 @@ a.blogpostlist__title-link {
 	color: @color__h3--text;
 
     .style--light & {
-        color: @contrast--light;
+        color: @color__h3--text;
     }
 
     .style--accent & {

@@ -13,7 +13,7 @@
 	background: @color__image--background;
 
 	.style--light & {
-        background-color: @color--light;
+        background-color:@color__image--background;
     }
 
     .style--accent & {
@@ -58,19 +58,27 @@
 .image-title {
 	.heading--4;
 	color: @color__image-title--text;
+
+    .style--light & {
+        color: @color__image-title--text;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
 }
 
 // Image Description
 
 .image-description {
 	color: @color__image-description--text;
-}
-
-.imagewidget__image-title,
-.imagewidget__image-description {
 
     .style--light & {
-        color: @contrast--light;
+        color: @color__image-description--text;
     }
 
     .style--accent & {
