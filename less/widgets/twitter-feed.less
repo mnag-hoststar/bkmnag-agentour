@@ -167,11 +167,7 @@ a.twitter__account-link {
 
 .twitter__timestamp,
 .twitter__retweeted-by {
-	font-family: @font__h4--font-family;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-	font-size: 0.8em;
-	line-height: 1.5em;
+	.timestamp-styles;
 }
 
 .twitter__retweeted-by {
@@ -179,8 +175,8 @@ a.twitter__account-link {
 }
 
 .tweet-metadata .via,
-.tweet-metadata a,
-.twitter__timestamp {
+.tweet-metadata a {
+	opacity: 0.6;
 	color: @color__p--text;
 
 	.style--light & {

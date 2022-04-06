@@ -1,15 +1,5 @@
 // SLIDESHOW
 
-// Slideshow Mixins
-
-.controls-font-size() {
-	font-size: 25px;
-
-	@media @tablet {
-		font-size: 20px;
-	}
-}
-
 .responsiveslideshow {
 
 	// Slideshow
@@ -19,6 +9,7 @@
 		min-height: 100px;
 		max-height: 700px;
 		padding-bottom: 60%;
+		background-color: fade(@color__header--background, 60%);
 	}
 	
 	// Slideshow Item
@@ -65,7 +56,6 @@
 		.display-flex(flex);
 		.flex-direction(column);
 		.justify-content(center, center);
-		.controls-font-size();
 	}
 	
 	.responsiveslideshow__image {
@@ -93,34 +83,32 @@
 	.slide-navigation {
 		display: block;
 		position: absolute;
-		top: 0;
+		top: 1em;
 		left: 0;
 		right: 0;
 		margin: 0;
-		opacity: 0;
 		.transition(opacity);
-	
-		.widget[data-name="responsiveslideshow"]:hover &,
-		.widget[data-name="responsiveslideshow"]:focus & {
-			opacity: 1;
-		}
 		
 		// Button
 	
 		.button {
+			z-index: 2;
 			position: absolute;
-			top: 50%;
+			top: 0;
 			margin: 0;
 			padding: 0;
-			height: 2.5em;
-			width: 2.5em;
-			border: none;
-			background-color: @color__slideshow-caption--background;
+			height: 45px;
+			width: 45px;
+			background: fade(@color__slideshow-pagination-item--text--selected, 20%);
 			color: @color__slideshow-pagination-item--text;
 			.box-shadow(none);
-			.transition(background-color);
-			z-index: 2;
-			.controls-font-size();
+			.transition (all, 0.5s, ease);
+			border: 2px solid @color__slideshow-pagination-item--text;
+
+			&:hover {
+				border: 2px solid @color__button--background--hover;
+				color: @color__button--text--hover;
+			}
 			
 			&:before,
 			&:after {
@@ -138,19 +126,19 @@
 	
 		.previous-button {
 			left: 50%;
-			margin-left: -4.25em;
+			margin-left: -80px;
 			padding-right: 0em;
 		}
 	
 		.next-button {
 			right: 50%;
-			margin-right: -4.25em;
+			margin-right: -80px;
 			padding-left: 0.3em;
 		}
 	
 		.pause-toggle {
 			left: 50%;
-			margin-left: -1.25em;
+			margin-left: -22.5px;
 			padding-left: 0.15em;
 	
 			// Play Icon
@@ -191,7 +179,7 @@
 			display: block;
 			overflow: hidden;
 			text-indent: -10000px;
-			background-color: @color__slideshow-pagination-item--text;
+			background: fade(@color__slideshow-pagination-item--text--selected, 20%);
 			border: 2px solid @color__slideshow-pagination-item--text;
 			width: 18px;
 			height: 18px;
@@ -215,14 +203,13 @@
 			&:hover {
 				margin: 0;
 				padding: 0;
-				.box-shadow(none);
+				border: 2px solid @color__button--background--hover;
 			}
 		}
 	
 		&.selected .button {
 			top: -1px;
-			border: 2px solid @color__slideshow-pagination-item--text--selected;
-			background: fade(@color__slideshow-pagination-item--text--selected, 80%);
+			border: 2px solid @color__button--background--hover;
 			.transform-scale(1.5);
 	
 			@media @tablet {

@@ -3,15 +3,10 @@
 // Logo & Company Name
 
 .template__company {
-	-webkit-flex: 1;
-	-ms-flex: 1;   
-    flex: 1;
     z-index: 3;
 	
 	@media @tablet {
-		-webkit-flex: 5;
-		-ms-flex: 5;  
-	    flex: 5;
+		flex-grow: 1;
 	}
 	
 	.widget {
@@ -39,6 +34,7 @@
 		color: @color__companyname--text;
 		text-transform: uppercase;
 		word-wrap: anywhere;
+		word-break: normal;
 
 		.make-font-a-little-smaller(@font__companyname--font-size);
 		.make-font-smaller(@font__companyname--font-size);
@@ -56,30 +52,20 @@
 
 // Navigation
 
-
-html.nav-open {
-	overflow: hidden;
-}
-
 .template__navigation {
-	-webkit-flex: 1;
-	-ms-flex: 1; 
-    flex: 1;
-    @media @tablet {
-		-webkit-flex: 1;
-		-ms-flex: 1;   
-		flex: 1;
-    }
+	flex-grow: 1;
 }
 
-.widget[data-widget-type="extendednavigation"] {
+.template__navigation,
+.widget[data-widget-type="extendednavigation"],
+.extendednavigation {
 	@media @tablet {
 		position: absolute;
 		top: 0;
-		right: 0;
 		left: 0;
+		right: 0;
 		bottom: 0;
-		z-index: 2;
+		z-index: 10;
 	}
 }
 
@@ -89,19 +75,16 @@ html.nav-open {
 	display: none;
 	
 	@media @tablet {
-		
-		// Displays as Icon's Middle Bar
-		
 		z-index: 200;
 		overflow: hidden;
 		position: absolute;
 		top: 50%;
-		right: 5%;
+		right: 0;
 		display: block;
 		cursor: pointer;
 		background-color: transparent;
 		background-clip: content-box;
-		margin: -11px 0;
+		margin: -13px 0;
 		padding: 0;
 		width: 28px;
 		height: 26px;
@@ -181,9 +164,6 @@ html.nav-open {
 	
 	.open & {
 		@media @tablet {
-			
-			// Top and bottom Bar
-			
 			&:before,
 			&:after {
 				width: 30px;
@@ -223,39 +203,29 @@ html.nav-open {
 
 .navigation-body {
 	.transition(opacity, 0s);
+	margin-right: -1em;
 	
 	@media @tablet {
-		outline: 0;
-		height: 0;
-		width: 0;
-		opacity: 0;
+		display: none;
+		position: absolute;
+		margin-right: 0;
+		top: 100%;
+		left: 0;
+		right: 0;
 
 		.open & {
 			display: block;
-			opacity: 1;
-			width: auto;
-			width: 100vw;
-			overflow: auto;
-			height: auto;
-			height: 100vh;
-			background-color: fade(@color__body--background, 90%);
-			margin: 0 -5%;
-			.transition(opacity, 0.25s);
 		}
 	}
-}
-
-// Navigation List
-
-.navigation-list {
-	padding: 1em 0;
 	
-    @media @tablet {
-		display: block;
-		height: auto;
-		max-width: 500px;
-		margin: 150px auto 0;
-		text-align: center;
+	@media @mobile {
+		margin-right: 0;
+	}
+
+	.navigation-list {
+		margin: 0;
+		padding-bottom: 0.5em;
+		background-color: @color__body--background;
 	}
 }
 
@@ -289,6 +259,7 @@ html.nav-open {
 			padding: 0.5em 0;
 			font-size: @font__navigation--font-size * 1.2;
 			word-break: break-word;
+			border-bottom: none;
 		}
 		
 		&:hover {
@@ -298,7 +269,7 @@ html.nav-open {
 			
 			@media @tablet {
 				color: @color__navigation--text--hover;
-				border-bottom: 2px solid transparent;
+				border-bottom: none;
 			}
 		}
 	}
@@ -309,7 +280,7 @@ html.nav-open {
 
 		@media @tablet {
 			color: @color__navigation--text--selected;
-			border-bottom: 2px solid transparent;
+			border-bottom: none;
 		}
 	}
 
@@ -348,7 +319,7 @@ html.nav-open {
 	.navigation-item.folder:hover &,
 	.navigation-item.folder:active & {
 		position: absolute;
-		right: 0;
+		right: 1em;
 		left: auto;
 		opacity: 0;
     	margin: 0.5em 0 0;
@@ -365,6 +336,7 @@ html.nav-open {
 
 		@media @tablet {
 			position: static;
+			right: 0;
 			margin: 0;
 			padding: 0;
 			.box-shadow(none);
@@ -372,9 +344,9 @@ html.nav-open {
 	}
 	
 	.navigation-item.folder.folder-open & {
-    	overflow: visible;
-		display: block;
 		opacity: 1;
+		display: block;
+    	overflow: visible;
 		height: auto;
 		.transition(opacity);
 
@@ -382,7 +354,16 @@ html.nav-open {
 			position: static;
 			margin: 0 0 0.5em;
 			padding: 0;
+			max-width: none;
 		}
+	}
+}
+
+.navigation-item.folder {
+	&.folder-open:hover .navigation-list--children,
+	&.folder-open:active .navigation-list--children,
+	&.folder-open .navigation-list--children {
+		opacity: 1;
 	}
 }
 
@@ -395,14 +376,14 @@ html.nav-open {
 	}
 
 	.item-name {
-		color: @color__navigation--text;
-		line-height: 1.5em;
-		border-bottom: 0;
+		border-bottom: none;
 		word-break: break-word;
+		line-height: 1.5em;
+		color: @color__navigation--text;
 		
 		&:hover {
+			border-bottom: none;
 			color: @color__navigation--text--hover;
-			border-bottom: 0;
 		}
 	}
 
@@ -410,16 +391,5 @@ html.nav-open {
 
 	&.selected .item-name {
 		color: @color__navigation--text--selected;
-	}
-}
-
-.navigation-item.folder {
-	
-	// Open Submenu
-	
-	&.folder-open:hover .navigation-list--children,
-	&.folder-open:active .navigation-list--children,
-	&.folder-open .navigation-list--children {
-		opacity: 1;
 	}
 }

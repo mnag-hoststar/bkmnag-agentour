@@ -34,6 +34,7 @@
         margin-bottom: 1em;
         color: @color__form-legend--text;
         background-color: transparent;
+        font-size: 1.2em;
     
         .style--light & {
             color: @color__form-legend--text;
@@ -57,12 +58,6 @@
             margin-bottom: 0;
         }
     }
-}
-
-label, .label {
-	font-family: @font__p--font-family;
-	font-size: @font__p--font-size;
-    word-break: break-word;
 }
 
 input,
@@ -101,13 +96,13 @@ textarea {
     }
 
     .style--accent & {
-        background-color: @color--accent;
+        background-color: darken(@color--accent, 5%);
         border-color: fade(@contrast--accent, 60%);
         color: @contrast--accent;
     }
 
     .style--dark & {
-        background-color: @color--dark;
+        background-color: darken(@color--dark, 5%);
         border-color: fade(@contrast--dark, 60%);
         color: @contrast--dark;
     }
@@ -305,12 +300,12 @@ input:focus {
                     }
 
                     .style--accent & {
-                        background-color: @color--accent;
+                        background-color: darken(@color--accent, 5%);
                         border-color: fade(@contrast--accent, 60%);
                     }
 
                     .style--dark & {
-                        background-color: @color--dark;
+                        background-color: darken(@color--dark, 5%);
                         border-color: fade(@contrast--dark, 60%);
                     }
 				}
@@ -446,13 +441,13 @@ input:focus {
 
 // Select
 
-select {
-    position: relative;
+select,
+.advancedcontactform__select {
     display: block;
-	padding: 0 2em 0 0.6em;
+	padding: 0 2.25em 0 0.6em;
     width: 100%;
     border: 2px solid @color__form--border;
-	background-color: transparent;
+    background-color: @color__form-legend--background;
     font-size: 1em;
     color: @color__p--text;
     .border-radius(0);
@@ -464,21 +459,23 @@ select {
 
     .style--light & {
         border-color: @color__form--border;
+        background-color: @color__form-legend--background;
         color: @color__p--text;
     }
 
     .style--accent & {
         border-color: fade(@contrast--accent, 60%);
+        background-color: darken(@color--accent, 5%);
         color: @contrast--accent;
     }
 
     .style--dark & {
         border-color: fade(@contrast--dark, 60%);
+        background-color: darken(@color--dark, 5%);
         color: @contrast--dark;
     }
 
     &:hover {
-		background-color: transparent;
     	border: 2px solid darken(@color__form--border, 10%);
 
        .style--light & {

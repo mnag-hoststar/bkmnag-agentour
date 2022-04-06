@@ -28,24 +28,22 @@
 }
 
 .tag-list,
-.tag-item,
-.dietary-list {
+.tag-item {
 	line-height: 1em;
 }
 
 a.category-link,
-a.tag-link,
-.dietary-item {
+a.tag-link {
 	display: inline-block;
-	background: @color__blogpost-article--background;
-	margin: 0.4em 0.8em 0.4em 0;
+	margin: 0.5em 1em 0.5em 0;
 	padding: 0.6em;
-	line-height: 1em;
+	line-height: 1.4em;
 	letter-spacing: @font__h4--letter-spacing;
-	text-transform: uppercase;
 	font-size: @font__h4--font-size*0.8;
 	font-family: @font__h4--font-family;
 	color: @color__button--text;
+	text-transform: uppercase;
+	text-align: left;
 
 	.style--light & {
         color: @color__button--text;
@@ -64,19 +62,8 @@ a.tag-link,
 	.make-font-a-lot-smaller(@font__h4--font-size, 0.7, 0.6);
 	
 	&:hover {
-		background: @color__blogpost-article--background;
-
-		.style--light & {
-			background: @color__blogpost-article--background;
-		}
-	
-		.style--accent & {
-			background: @contrast--accent;
-		}
-	
-		.style--dark & {
-			background: @contrast--dark;
-		}
+		background: transparent;
+		text-decoration: none;
 	}
 }
 

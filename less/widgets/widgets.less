@@ -43,7 +43,8 @@
     }
 }
 
-.widget[data-name="content"], 
+.widget[data-name="content"],
+.widget[data-name="embed"],
 .row:not(.row--width-no-padding) .widget[data-name="contentgroup"],
 .widget[data-name="pagetitle"],
 .widget[data-widget-type="pagetitle"],
@@ -74,7 +75,8 @@
 .widget[data-name="ecomcategorieslist"],
 .widget[data-name="ecombasketsummary"],
 .widget[data-name="menusections"],
-.widget[data-name="menu"] {
+.widget[data-name="menu"],
+.widget[data-name="userregistration"] {
     width: 80%;
 	max-width: @layout-width-desktop;
 	margin: 0 auto;
@@ -138,8 +140,8 @@
 }
 
 hr.line__rule {
-	height: 3px;
-	background-color: fade(@color__p--text, 60%);
+	height: 2px;
+    background-color: @color__slideshow-pagination-item--text;
 
     .style--light & {
         background-color: fade(@color__p--text, 60%);

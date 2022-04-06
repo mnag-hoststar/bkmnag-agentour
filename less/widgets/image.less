@@ -57,6 +57,7 @@
 
 .image-title {
 	.heading--4;
+    line-height: 1.2em;
 	color: @color__image-title--text;
 
     .style--light & {
@@ -88,4 +89,9 @@
     .style--dark & {
         color: @contrast--dark;
     }
+}
+
+.image-title + .image-description {
+    margin-top: -0.5em;
+    padding-top: 0;
 }
