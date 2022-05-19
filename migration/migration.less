@@ -6,6 +6,23 @@
 // Template styling resets
 
 #migrated {
+
+	// Basekit Elements
+
+	.top-level-overlay button.top-level-overlay__delete-button,
+	.row-overlay__delete-button,
+	.top-level-overlay .top-level-overlay__arrangement-button-group,
+	.row-overlay__arrangement-button-group, .row-overlay__edit-button,
+	.row-overlay__edit-button {
+		min-height: 32px !important;
+	}
+
+	.is-dropdown-open .row-overlay__edit-button, .is-setting-open .row-overlay__edit-button {
+		min-height: 40px !important;
+	}
+
+    // Main
+    
     // Remove spacing from last or only widget inside a row
     [data-name="row"] .column .widget,
     [data-name="row"] .widget:only-child {
@@ -16,10 +33,6 @@
     .row--layout-pricing-1a [data-name="responsivecolumns"] {
         max-width: 100%;
         width: 100%;
-
-        @media @tablet {
-            width: 90%;
-        }
     }
 
     // Hides opaque bars on row overlay, useful for contained width sites
@@ -56,4 +69,14 @@
     .hero .widget[data-widget-type="feature"] {
         padding: 0;
     }
+
+	// Pricing Table
+
+	.row--layout-pricing-1a .column ul li {
+		padding-left: 2.5em;
+
+		&:before {
+			content: none;
+		}
+	}
 }

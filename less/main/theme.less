@@ -74,7 +74,7 @@ html, body {
 
     @media @bp-global-above-fullwidth {
         width: 90%;
-        max-width: @layout-max-width;
+        max-width: 1400px;
         margin: 0 auto;
     }
 
@@ -96,7 +96,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 // Main
 
 .template__content {
-	padding-top: @header-height;
+	padding-top: 2em;
 
 	.hero + & {
 		padding-top: 0;
@@ -121,28 +121,21 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 	// Widget
 
-	.widget {
-		width: 80%;
-		max-width: @layout-width-desktop;
-		margin: 0 auto;
-	
+	.container {
+        .content-spacing;
+
 		@media @mobile {
-			width: 90%;
+			padding-left: 10%;
+			padding-right: 10%;
 		}
 
         &:not(:last-child) {
             margin-bottom: 2em;
         }
-    
-    	.form-body {
-    		display: block;
-            
-    		.form-group {
-    			&:first-child {
-    				padding-right: 0;
-    			}
-    		}
-    	}
+
+		.signupform .form-body {
+			margin: 0 auto;
+		}
 	}
 }
 

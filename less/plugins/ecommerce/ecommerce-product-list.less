@@ -1,14 +1,5 @@
 // ECOMMERCE - PRODUCT LIST
 
-// Product List in the Shop
-
-#page-zones__main-widgets__productslist {
-    @media @mobile {
-        max-width: 90%;
-        margin: 0 auto 1em;
-    }
-}
-
 // Title
 
 .ecomproductslist__listing-title {
@@ -23,22 +14,8 @@
 
 .product-filters {
 	form {
-		max-width: @layout-width-desktop;
-		margin: 0 auto;
-		margin-bottom: 2em;
-        width: 80%;
-
-        @media @mobile {
-            width: 90%;
-        }
-		
-		.responsivecolumns & {
-            width: 100%;
-
-            @media @mobile {
-                width: 90%;
-            }
-		}
+        .content-spacing;
+        margin-bottom: 2em;
 	}
 
     .form-group {

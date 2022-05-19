@@ -28,21 +28,8 @@
 // Caption
 
 .caption.imagewidget__caption.js-pswp-image-trigger {
-    width: 80%;
-	max-width: @layout-width-desktop;
-	margin: 0.5em auto 0;
-	
-    @media @mobile {
-        width: 90%;
-	}
-		
-	.responsivecolumns & {
-		width: 100%;
-
-		@media @mobile {
-			width: 90%;
-		}
-	}
+    .content-spacing;
+    margin-top: 0.5em;
 }
 
 .image-caption--spacing() when not (@color__image--background = @color__body--background) {

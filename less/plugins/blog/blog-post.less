@@ -42,17 +42,18 @@
 .blogpost {
 	&__post-content,
 	&__post-footer {
-		width: 80%;
-		max-width: @layout-width-desktop;
-		margin: 0 auto;
-	
+        .content-spacing;
+
 		@media @mobile {
-			width: 90%;
+			padding-left: 10%;
+			padding-right: 10%;
 		}
     }
+
 	&__post-content {
 		margin-bottom: 2em;
 	}
+
     &__post-header {
         padding: 2em 0 1em;
     }

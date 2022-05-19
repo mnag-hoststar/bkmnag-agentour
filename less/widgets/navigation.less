@@ -33,7 +33,6 @@
 		letter-spacing: @font__companyname--letter-spacing;
 		color: @color__companyname--text;
 		text-transform: uppercase;
-		word-wrap: anywhere;
 		word-break: normal;
 
 		.make-font-a-little-smaller(@font__companyname--font-size);
@@ -46,6 +45,10 @@
 
 		&:hover {
 			text-decoration: none;
+		}
+
+		.companyname__company-text {
+			word-break: normal;
 		}
 	}
 }
@@ -242,7 +245,7 @@
 	
 	.item-name {
 		position: relative;
-		padding: 1em 0;
+		padding: 1em 0 0.25em;
 		margin: 0 1.5em;
 		text-transform: uppercase;
 		font-family: @font__navigation--font-family;

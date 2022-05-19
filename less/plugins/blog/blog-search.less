@@ -2,23 +2,6 @@
 
 // Conditional Mixins
 
-.widget[data-name="blogsearch"] {
-	padding: 0;
-	background-color: @color__blogsearch--background;
-
-	.style--light & {
-		background: @color__blogsearch--background;
-    }
-
-    .style--accent & {
-    	background: transparent;
-    }
-
-    .style--dark & {
-    	background: transparent;
-    }
-}
-
 .widget[data-name="blogsearch"] .blogsearch {
 	width: auto;
 	max-width: none;
@@ -34,9 +17,4 @@
 
 .blogsearch {
 	.signupform;
-}
-
-.blogsearch__form {
-	max-width: @layout-width-desktop;
-    margin: 0 auto;
 }

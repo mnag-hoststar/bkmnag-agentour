@@ -73,8 +73,12 @@ a.tag-link {
 .blogpostlist {
 	.pagination-list {
 		.display-flex(flex);
-		max-width: @layout-width-desktop;
-		margin: 2em auto;
+        .content-spacing;
+
+		@media @mobile {
+			padding-left: 10%;
+			padding-right: 10%;
+		}
 	}
 
 	.pagination-item {

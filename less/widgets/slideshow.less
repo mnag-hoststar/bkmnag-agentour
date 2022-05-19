@@ -6,6 +6,7 @@
 	
 	.responsiveslideshow__figure,
 	.responsiveslideshow__slides-list {
+		position: relative;
 		min-height: 100px;
 		max-height: 700px;
 		padding-bottom: 60%;
@@ -50,7 +51,7 @@
 		top: 0;
 		bottom: 0;
 		margin: 0;
-		padding: 3em 0;
+		padding: 5em 0;
 		background-color: @color__slideshow-caption--background;
 		text-align: center;
 		.display-flex(flex);
@@ -63,10 +64,9 @@
 	
 		&-title,
 		&-description {
-			margin: 0 auto;
-			max-width: 80%;
-			width: @layout-width-desktop;
 			line-height: 1.25em;
+			padding-left: 10%;
+			padding-right: 10%;
 		}
 		
 		&-title {
@@ -154,6 +154,8 @@
 	.responsiveslideshow__slide-pagination {
 		z-index: 1;
 		position: absolute;
+		left: 0;
+		right: 0;
 		bottom: 0;
 		width: 100%;
 		text-align: center;
