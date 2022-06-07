@@ -4,9 +4,11 @@
 
 .template__company {
     z-index: 3;
+	max-width: 30%;
 	
 	@media @tablet {
 		flex-grow: 1;
+		max-width: none;
 	}
 	
 	.widget {
@@ -48,7 +50,7 @@
 		}
 
 		.companyname__company-text {
-			word-break: normal;
+			word-break: break-word;
 		}
 	}
 }
@@ -57,6 +59,11 @@
 
 .template__navigation {
 	flex-grow: 1;
+	max-width: 70%;
+	
+	@media @tablet {
+		max-width: none;
+	}
 }
 
 .template__navigation,
