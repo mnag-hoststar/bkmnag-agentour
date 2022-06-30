@@ -20,6 +20,7 @@
 
     .form-group {
         margin-right: 0;
+        margin-bottom: 10px;
     }
 	
 	// Legend
@@ -67,20 +68,26 @@
         -webkit-align-items: stretch;
         -ms-flex-align: stretch;
         align-items: stretch;
+        gap: 10px;
+
+		@media @mobile {
+            display: block;
+		}
+
+		.responsivecolumns & {
+            display: block;
+		}
     }
 
     // Form Group
 
     .form-group {
-        margin-bottom: 0;
-
         @media @mobile, @tablet-horizontal {
             display: block;
         }
 
         &:first-child {
             flex-grow: 1;
-            margin-right: 10px;
 
             @media @mobile {
                 width: 100%;
@@ -94,24 +101,6 @@
                 margin-right: 0;
             }
         }
-    }
-
-    // Clear Search Group Selector :) Ugly, I know
-
-    .form-group + .form-group + .form-group {
-        width: 100%;
-        margin-right: 10px;
-        margin-top: 10px;
-
-        .button {
-            width: 100%;
-            text-align: center;
-            display: block;
-        }
-    }
-
-    input {
-        height: 45px;
     }
 }
 

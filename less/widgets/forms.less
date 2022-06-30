@@ -34,9 +34,10 @@
     
     .form-group {
         margin-bottom: 1em;
-    
-        &:last-of-type {
+        
+        @media @mobile {
             margin-bottom: 0;
+            width: 100%;
         }
     }
 }
