@@ -110,21 +110,11 @@
     line-height: 0;
 }
 
-hr.line__rule {
+hr.line__rule,
+.content hr {
 	height: 2px;
-    background-color: @color__slideshow-pagination-item--text;
-
-    .style--light & {
-        background-color: fade(@color__p--text, 60%);
-    }
-
-    .style--accent & {
-        background-color: fade(@contrast--accent, 60%);
-    }
-
-    .style--dark & {
-        background-color: fade(@contrast--dark, 60%);
-    }
+    background-color: @color__form--border;
+    border: none;
 }
 
 // Page Title Widget
