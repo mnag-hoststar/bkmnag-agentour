@@ -74,6 +74,7 @@ a.tag-link {
 	.pagination-list {
 		.display-flex(flex);
         .content-spacing;
+		align-items: center;
 
 		@media @mobile {
 			padding-left: 10%;
@@ -132,5 +133,40 @@ a.tag-link {
 				margin: 0.1em -0.3em 0 -0.1em;
 			}
 		}
+	}
+}
+
+// Styles only for the Shop Pagination.
+
+.ecomproductslist {
+	.pagination-list {
+		justify-content: center;
+		gap: 1em;
+		margin: 1em 0 3em;
+
+		@media @mobile {
+			gap: 0.5em;
+		}
+	}
+
+	a.button--pagination {
+		padding: 0.8em;
+		min-width: 45px;
+
+		@media @mobile {
+			padding: 0;
+			min-width: 26px;
+			min-height: 26px;
+			line-height: 22px;
+		}
+	}
+
+	span.ecomproductslist__pagination-dots {
+		display: block;
+		border-radius: 50%;
+		width: 3px;
+		height: 3px;
+		background: @color__button--text;
+		font-size: 0;
 	}
 }
